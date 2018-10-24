@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">UMLconfessions</string>
+    <string name="app_name">UML confessions</string>
+    <string name="sign_in">Sign In</string>
+    <string name="logo_display">logo display</string>
 </resources>
