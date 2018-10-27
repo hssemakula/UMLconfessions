@@ -1,0 +1,4 @@
+#Sat Oct 27 19:15:03 EDT 2018
+base.0=C\:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+path.0=classes.dex
+renamed.0=classes.dex
