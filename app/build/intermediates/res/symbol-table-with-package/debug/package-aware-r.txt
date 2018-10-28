@@ -629,7 +629,6 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable appicon
 drawable appicon_white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -651,6 +650,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable splash_screen_icon
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -706,6 +706,8 @@ id default_activity_button
 id dimensions
 id direct
 id disableHome
+id editText
+id editText2
 id edit_query
 id end
 id expand_activities_button
@@ -723,6 +725,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -834,8 +837,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout log_in_1
-layout log_in_2
 layout log_in_3
+layout log_in_alternative
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -891,6 +894,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string login_string
+string logo_header
 string password_hint
 string search_menu_title
 string splash_desc

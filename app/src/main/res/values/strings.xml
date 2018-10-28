@@ -4,4 +4,5 @@
     <string name="username_hint">username</string>
     <string name="password_hint">password</string>
     <string name="splash_desc">splash logo</string>
+    <string name="logo_header">Logo Header</string>
 </resources>

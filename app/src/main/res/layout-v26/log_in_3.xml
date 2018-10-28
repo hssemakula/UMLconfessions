@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="@drawable/login_bg2">
-
+    
     <!--Constraint layout great for designing views with drag and drop.
     used here to contain all elements-->
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="1280dp">
-        <!--Logo header -->
+
+        <!--Logo header-->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -42,17 +41,16 @@
             android:background="@drawable/inp_rou"
             android:gravity="center"
             android:hint="@string/username_hint"
-            android:inputType=""
+            android:inputType="text"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.711"
-            tools:targetApi="o" />
+            app:layout_constraintVertical_bias="0.783" />
 
-        <!--password textfield -->
+        <!--username password -->
         <EditText
             android:id="@+id/editText2"
             android:layout_width="230dp"
@@ -69,34 +67,25 @@
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.805"
-            tools:targetApi="o" />
-
-        <!--uLogin button-->
+            app:layout_constraintVertical_bias="0.89" />
+        <!--login button -->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="512dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:background="@drawable/login_btn"
             android:padding="2dp"
             android:text="@string/login_string"
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.929" />
-
-    </android.support.constraint.ConstraintLayout>
-
-
+            app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
 </ScrollView>

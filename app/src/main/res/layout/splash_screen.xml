@@ -15,7 +15,7 @@
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/splash_desc"
         android:padding="110dp"
-        android:src="@drawable/appicon"
+        android:src="@drawable/splash_screen_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

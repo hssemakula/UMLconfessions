@@ -2,110 +2,132 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="28"
-    build-mode="FULL"
+    build-mode="COLD"
     density="560dpi"
     format="10"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.2.0"
-    timestamp="1540757373192"
+    timestamp="1540765836616"
     token="-6734038142485460799"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1396" />
+        duration="1582" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="82" />
+        duration="19" />
     <task
         name="verifier"
-        duration="79" />
+        duration="47" />
 
     <artifact
         location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1540757373192"
+        timestamp="1540764987051"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1540765836616"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Hillary\Desktop\UMLconfessions\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
