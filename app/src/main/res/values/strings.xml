@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UMLconfessions</string>
+    <string name="app_name">Uml Confessions</string>
     <string name="login_string">LOGIN</string>
     <string name="username_hint">username</string>
     <string name="password_hint">password</string>

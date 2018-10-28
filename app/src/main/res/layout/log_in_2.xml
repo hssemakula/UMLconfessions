@@ -84,7 +84,7 @@
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/go_btn"
+                android:background="@drawable/login_btn"
                 android:text="GO!"
                 android:textColor="#fff"
                 android:textSize="15sp" />
