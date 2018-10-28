@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.hillary.umlconfessions.log_in" >
+        <activity android:name="com.example.hillary.umlconfessions.LogInActivity" >
+        </activity>
+        <activity android:name="com.example.hillary.umlconfessions.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
