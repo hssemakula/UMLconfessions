@@ -632,10 +632,13 @@ drawable abc_vector_test
 drawable appicon_white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_lock_black_24dp
 drawable ic_menu_black_24dp
+drawable ic_person_black_24dp
 drawable inp_rou
 drawable login_bg
 drawable login_bg2
+drawable login_bg_land
 drawable login_btn
 drawable logo
 drawable notification_action_background
@@ -687,6 +690,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
 id buttonPanel
 id center
 id center_horizontal
@@ -697,6 +701,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id constraintLayout2
 id content
 id contentPanel
 id custom
@@ -836,7 +841,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout log_in_1
+layout log_in
 layout log_in_3
 layout log_in_alternative
 layout notification_action

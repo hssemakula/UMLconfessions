@@ -9,7 +9,7 @@ public class LogInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.log_in_1);
+        setContentView(R.layout.log_in);
         getSupportActionBar().hide();
     }
 }
