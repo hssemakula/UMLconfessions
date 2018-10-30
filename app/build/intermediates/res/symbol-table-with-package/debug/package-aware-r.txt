@@ -640,6 +640,7 @@ drawable login_bg
 drawable login_bg2
 drawable login_bg_land
 drawable login_btn
+drawable login_btn_color_change
 drawable logo
 drawable notification_action_background
 drawable notification_bg
@@ -736,6 +737,8 @@ id line3
 id listMode
 id list_item
 id login_button
+id login_button_color_change
+id login_button_default_color
 id logo_header
 id message
 id middle
