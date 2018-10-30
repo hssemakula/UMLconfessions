@@ -9,10 +9,10 @@
     used here to contain all elements-->
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1280dp">
+        android:layout_height="wrap_content">
         <!--Logo header -->
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/logo_header"
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:layout_marginStart="8dp"
@@ -30,7 +30,7 @@
 
         <!--username textfield -->
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/username"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
 
         <!--password textfield -->
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -66,7 +66,7 @@
             android:gravity="start"
             android:drawableStart="@drawable/ic_lock_black_24dp"
             android:hint="@string/password_hint"
-            android:inputType=""
+            android:inputType="textPassword"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,6 +77,7 @@
 
         <!--uLogin button-->
         <Button
+            android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -88,6 +89,7 @@
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:onClick="submitLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

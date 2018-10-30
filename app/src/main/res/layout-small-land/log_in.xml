@@ -14,10 +14,10 @@
         android:layout_weight="1">
         <!--Logo header -->
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/logo_header"
 
             android:layout_width="wrap_content"
-            android:layout_height="250dp"
+            android:layout_height="100dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
@@ -30,7 +30,6 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
@@ -42,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent">
         <!--username textfield -->
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/username"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -63,7 +62,7 @@
 
         <!--password textfield -->
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -73,15 +72,15 @@
             android:drawableStart="@drawable/ic_lock_black_24dp"
             android:gravity="start"
             android:hint="@string/password_hint"
-            android:inputType=""
+            android:inputType="textPassword"
             android:padding="8dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/username"
             tools:targetApi="o" />
 
-        <!--uLogin button-->
+        <!--Login button-->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="84dp"
@@ -92,8 +91,9 @@
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:onClick="submitLogin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
     </android.support.constraint.ConstraintLayout>
 
 

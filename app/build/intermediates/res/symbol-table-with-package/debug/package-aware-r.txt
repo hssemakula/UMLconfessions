@@ -701,7 +701,6 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id constraintLayout2
 id content
 id contentPanel
 id custom
@@ -711,8 +710,6 @@ id default_activity_button
 id dimensions
 id direct
 id disableHome
-id editText
-id editText2
 id edit_query
 id end
 id expand_activities_button
@@ -730,7 +727,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id info
 id invisible
 id italic
@@ -739,6 +735,8 @@ id line1
 id line3
 id listMode
 id list_item
+id login_button
+id logo_header
 id message
 id middle
 id multiply
@@ -751,6 +749,7 @@ id notification_main_column_container
 id packed
 id parent
 id parentPanel
+id password
 id percent
 id progress_circular
 id progress_horizontal
@@ -778,6 +777,7 @@ id showCustom
 id showHome
 id showTitle
 id spacer
+id splash_screen_logo
 id split_action_bar
 id spread
 id spread_inside
@@ -805,6 +805,7 @@ id topPanel
 id uniform
 id up
 id useLogo
+id username
 id withText
 id wrap
 id wrap_content
@@ -842,7 +843,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout log_in
-layout log_in_3
 layout log_in_alternative
 layout notification_action
 layout notification_action_tombstone
