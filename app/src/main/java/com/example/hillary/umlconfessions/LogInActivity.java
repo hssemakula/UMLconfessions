@@ -16,13 +16,13 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void submitLogin(View view){
-        //Show button animation
+      /*  //Show button animation
         ((Button)view).setBackgroundColor(R.drawable.login_btn_color_change);
         delay delayer = new delay();
         delayer.start();
         ((Button)view).setBackgroundColor(R.drawable.login_btn);
         //-------------------------------------------------------------
-
+*/
 
     }
 

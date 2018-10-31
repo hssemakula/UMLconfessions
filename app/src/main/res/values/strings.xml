@@ -5,4 +5,5 @@
     <string name="password_hint">password</string>
     <string name="splash_desc">splash logo</string>
     <string name="logo_header">Logo Header</string>
+    <string name="title_activity_view_posts_activity">view_posts_activity</string>
 </resources>
