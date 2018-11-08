@@ -2,6 +2,7 @@ package com.example.hillary.umlconfessions;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -11,7 +12,7 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.log_in);
     }
 
-    public void submitLogin(){
+    public void submitLogin(View view){
 
     }
 }
