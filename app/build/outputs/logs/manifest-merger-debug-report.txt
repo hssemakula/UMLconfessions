@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\14ddf88aec5ca6a56b69d52111a75d78\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\ca87698f84482f6590c5cd34237b7926\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d103f601e15914197635e7890da632a3\AndroidManifest.xml:2:1-11:12
@@ -35,25 +35,37 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Hillary\.gradle\c
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\7cd16518f319f2fdb2f204c83936a0ab\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\df3f73fd00eac14e07c1aa9d37c2f27b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\832ab7f43502ceb4f01b51e693c2d8c2\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:8:22-69
 application
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:10:5-26:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\14ddf88aec5ca6a56b69d52111a75d78\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\14ddf88aec5ca6a56b69d52111a75d78\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\d103f601e15914197635e7890da632a3\AndroidManifest.xml:9:5-20
@@ -65,39 +77,39 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Hillary\.g
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Hillary\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c0825b81c785be1f73d7982662d0f777\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.example.hillary.umlconfessions.LogInActivity
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:12:9-51
-	android:name
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:12:19-48
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:16:9-40
 activity#com.example.hillary.umlconfessions.SplashScreenActivity
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:13:9-19:20
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:name
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:13:19-55
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:17:19-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:21:27-74
 activity#com.example.hillary.umlconfessions.viewPosts
-ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:20:9-56
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:24:9-47
 	android:name
-		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:20:19-44
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:24:19-44
+activity#com.example.hillary.umlconfessions.LogInActivity
+ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:25:9-60
+	android:name
+		ADDED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml:25:19-48
 uses-sdk
 INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Hillary\Desktop\UMLconfessions\app\src\main\AndroidManifest.xml
