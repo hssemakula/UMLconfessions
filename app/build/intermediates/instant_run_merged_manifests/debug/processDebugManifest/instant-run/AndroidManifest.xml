@@ -24,13 +24,14 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.hillary.umlconfessions.SplashScreenActivity" >
+        </activity>
+        <activity android:name="com.example.hillary.umlconfessions.viewPosts" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.hillary.umlconfessions.viewPosts" />
         <activity android:name="com.example.hillary.umlconfessions.LogInActivity" />
 
         <provider
