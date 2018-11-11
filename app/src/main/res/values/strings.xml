@@ -37,4 +37,6 @@
     <string name="settings">Settings</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="log_out">Log out</string>
+    <string name="sample_text">This is a sample post. When the recycler view is complete, This will be filled with text from the server.</string>
+    <string name="sample_comment_zsize">3</string>
 </resources>

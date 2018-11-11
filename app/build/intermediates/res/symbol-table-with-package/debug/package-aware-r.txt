@@ -1023,8 +1023,12 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_person_black_24dp
+drawable ic_post_comment
+drawable ic_post_location
 drawable ic_settings_black_24dp
 drawable ic_terms
+drawable ic_thumb_down
+drawable ic_thumb_up
 drawable inp_rou
 drawable login_bg
 drawable login_bg2
@@ -1047,6 +1051,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable posts_circle
 drawable profile_bg
 drawable splash_screen_icon
 drawable tooltip_frame_dark
@@ -1099,6 +1104,8 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comment_button
+id comment_number
 id container
 id content
 id contentPanel
@@ -1115,6 +1122,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id down_vote
 id drawer_layout
 id edit_query
 id end
@@ -1185,6 +1193,8 @@ id parent_matrix
 id password
 id percent
 id pin
+id post
+id post_location
 id progress_circular
 id progress_horizontal
 id radio
@@ -1251,6 +1261,7 @@ id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id time_ago
 id title
 id titleDividerNoCustom
 id title_template
@@ -1266,10 +1277,12 @@ id transition_transform
 id uniform
 id unlabeled
 id up
+id up_vote
 id useLogo
 id username
 id view_offset_helper
 id visible
+id vote_size
 id withText
 id wrap
 id wrap_content
@@ -1363,6 +1376,7 @@ layout settings_fragment
 layout splash_screen
 layout support_simple_spinner_dropdown_item
 layout terms_and_conditions_fragment
+layout test
 menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1443,6 +1457,8 @@ string permission_rationale
 string profile_picture_desc
 string prompt_email
 string prompt_password
+string sample_comment_zsize
+string sample_text
 string search_menu_title
 string settings
 string splash_desc

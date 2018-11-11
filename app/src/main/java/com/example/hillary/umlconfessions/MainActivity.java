@@ -1,5 +1,6 @@
 package com.example.hillary.umlconfessions;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -64,6 +65,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new settingsFragment()).commit();
                 break;
+
+
+            case R.id.log_out:
+                Intent intent = new Intent(this, LogInActivity.class);
+                startActivity(intent);
+                this.finish();
         }
 
         drawer.closeDrawer(GravityCompat.START);
