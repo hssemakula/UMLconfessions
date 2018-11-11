@@ -1017,12 +1017,6 @@ drawable ic_launcher_foreground
 drawable ic_lock_black_24dp
 drawable ic_log_out
 drawable ic_menu_black_24dp
-drawable ic_menu_camera
-drawable ic_menu_gallery
-drawable ic_menu_manage
-drawable ic_menu_send
-drawable ic_menu_share
-drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
@@ -1052,7 +1046,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profile_bg
-drawable side_nav_bar
 drawable splash_screen_icon
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1079,7 +1072,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1172,12 +1164,6 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id nav_camera
-id nav_gallery
-id nav_manage
-id nav_send
-id nav_share
-id nav_slideshow
 id nav_viewer
 id navigation_header_container
 id never
@@ -1371,8 +1357,6 @@ layout select_dialog_singlechoice_material
 layout splash_screen
 layout support_simple_spinner_dropdown_item
 menu drawer_menu
-menu test
-menu test_drawer
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
