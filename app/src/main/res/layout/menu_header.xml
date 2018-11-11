@@ -11,18 +11,19 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"/>
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="@string/profile_picture_desc" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="To be coded in"
+        android:text="@string/to_be_coded_in"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To be coded in@email.com"
+        android:text="@string/to_be_coded_in_email_com"
         />
 </LinearLayout>

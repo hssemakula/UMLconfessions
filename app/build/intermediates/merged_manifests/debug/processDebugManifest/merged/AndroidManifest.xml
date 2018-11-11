@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.hillary.umlconfessions.SplashScreenActivity" >
         </activity>
-        <activity android:name="com.example.hillary.umlconfessions.viewPosts" >
+        <activity android:name="com.example.hillary.umlconfessions.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
