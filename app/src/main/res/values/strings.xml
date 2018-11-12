@@ -39,4 +39,5 @@
     <string name="log_out">Log out</string>
     <string name="sample_text">This is a sample post. When the recycler view is complete, This will be filled with text from the server.</string>
     <string name="sample_comment_zsize">3</string>
+    <string name="client_id">691289616795-c3vu5nqe4dhm8jgcqb8qhf7db9m1264c.apps.googleusercontent.com</string>
 </resources>
