@@ -191,6 +191,7 @@
         <!-- COMMENT SECTION BEGINS HERE UNDER RECYCLER VIEW -->
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_post_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
