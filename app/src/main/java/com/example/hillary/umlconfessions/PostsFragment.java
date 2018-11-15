@@ -25,13 +25,13 @@ public class PostsFragment extends Fragment {
 
         View currentView = inflater.inflate(R.layout.posts_fragment, container, false);
 
-        initializeRecycler((RecyclerView)currentView);
+        initializeRecycler(currentView);
 
         return currentView;
     }
 
-    private void initializeRecycler(RecyclerView view){
-        mRecyclerView =  view.findViewById(R.id.posts_recycler);
+    private void initializeRecycler(View view){
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.posts_recycler);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
