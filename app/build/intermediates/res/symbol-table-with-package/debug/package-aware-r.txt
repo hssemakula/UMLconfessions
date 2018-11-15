@@ -1014,6 +1014,10 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_exit
 drawable ic_feed
+drawable ic_fingerprint_black_24dp
+drawable ic_flag_black_24dp
+drawable ic_keyboard_arrow_down_black_24dp
+drawable ic_keyboard_arrow_up_black
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_lock_black_24dp
@@ -1051,7 +1055,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable posts_circle
 drawable profile_bg
 drawable splash_screen_icon
 drawable tooltip_frame_dark
@@ -1095,6 +1098,7 @@ id bottom
 id button
 id buttonPanel
 id cancel_action
+id card_post_container
 id center
 id center_horizontal
 id center_vertical
@@ -1105,7 +1109,15 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id comment_button
+id comment_down_vote
+id comment_layout
+id comment_location
 id comment_number
+id comment_report
+id comment_time_passed
+id comment_up_vote
+id comment_vote_layout
+id comment_vote_size
 id container
 id content
 id contentPanel
@@ -1195,10 +1207,14 @@ id percent
 id pin
 id post
 id post_location
+id post_text
+id posts_recycler
 id progress_circular
 id progress_horizontal
 id radio
+id report
 id right
+id right_header_info
 id right_icon
 id right_side
 id save_image_matrix
@@ -1262,6 +1278,7 @@ id textinput_error
 id textinput_helper_text
 id time
 id time_ago
+id time_passed
 id title
 id titleDividerNoCustom
 id title_template
@@ -1281,7 +1298,9 @@ id up_vote
 id useLogo
 id username
 id view_offset_helper
+id view_post_recycler
 id visible
+id vote_layout
 id vote_size
 id withText
 id wrap
@@ -1334,6 +1353,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout comment_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1368,6 +1388,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post_layout
 layout posts_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -1377,6 +1398,8 @@ layout splash_screen
 layout support_simple_spinner_dropdown_item
 layout terms_and_conditions_fragment
 layout test
+layout view_post_fragment
+layout view_post_fragment_test
 menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -1437,6 +1460,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string feed
 string hide_bottom_view_on_scroll_behavior
+string location_icon
 string log_out
 string login_string
 string logo_header
@@ -1457,8 +1481,11 @@ string permission_rationale
 string profile_picture_desc
 string prompt_email
 string prompt_password
-string sample_comment_zsize
+string sample_comment_size
+string sample_location
 string sample_text
+string sample_text_long
+string sample_time_passed
 string search_menu_title
 string settings
 string splash_desc
@@ -1470,6 +1497,7 @@ string title_activity_test
 string title_activity_view_posts_activity
 string to_be_coded_in
 string to_be_coded_in_email_com
+string user_tag
 string username_hint
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
