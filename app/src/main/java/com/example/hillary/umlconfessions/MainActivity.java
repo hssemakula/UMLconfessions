@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //open posts_fragment fragment on first run
         if(savedInstanceState == null) { //if device has just been rotated dont reload.
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new feedFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostsFragment()).commit();
             navigationView.setCheckedItem(R.id.feed);
         }
 
@@ -53,17 +53,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch(menuItem.getItemId()){
             case R.id.feed:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new feedFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostsFragment()).commit();
                 break;
 
 
             case R.id.terms:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new termsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TermsFragment()).commit();
                 break;
 
 
             case R.id.settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new settingsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
                 break;
 
 

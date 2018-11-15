@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class viewPostFragment extends Fragment {
+public class ViewPostFragment extends Fragment {
 
     @Nullable
     @Override
