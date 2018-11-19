@@ -1050,6 +1050,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_black_24dp
 drawable ic_exit
 drawable ic_feed
 drawable ic_fingerprint_black_24dp
@@ -1093,6 +1094,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable post_btn
 drawable profile_bg
 drawable splash_screen_icon
 drawable tooltip_frame_dark
@@ -1313,8 +1315,6 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id temp_edit
-id temp_submit_button
 id terms
 id text
 id text2
@@ -1405,6 +1405,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout comment_layout
+layout create_post
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1447,7 +1448,6 @@ layout select_dialog_singlechoice_material
 layout settings_fragment
 layout splash_screen
 layout support_simple_spinner_dropdown_item
-layout temporary_create_post
 layout terms_and_conditions_fragment
 layout test
 layout view_post_fragment

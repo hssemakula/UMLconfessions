@@ -36,7 +36,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.hillary.umlconfessions.GUI.Main____Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
         <activity android:name="com.example.hillary.umlconfessions.LogInActivity" />
         <activity android:name="com.example.hillary.umlconfessions.GUI.ConfessionsActivity" />
         <activity android:name="com.example.hillary.umlconfessions.SplashScreenActivity" >

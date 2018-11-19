@@ -18,7 +18,6 @@ import com.example.hillary.umlconfessions.R;
 import com.example.hillary.umlconfessions.frameworks.Confessions;
 import com.example.hillary.umlconfessions.frameworks.UserInfo;
 import com.example.hillary.umlconfessions.tools.DatabaseUsage;
-import com.example.hillary.umlconfessions.tools.OnlineFunctionality;
 import com.example.hillary.umlconfessions.tools.Strings_Reference;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,9 +42,9 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         confessionsFramework = new Confessions();
         myProgressDialog = new ProgressDialog(getContext());
 
-        rootView = getActivity().getLayoutInflater().inflate(R.layout.temporary_create_post, null); //layout for creating a "confession"
+        rootView = getActivity().getLayoutInflater().inflate(R.layout.create_post, null); //layout for creating a "confession"
         //showConfession = (ImageView)rootView.findViewById(R.id.); //an imageview in creating a confession....maybe not necessary
-        rootView.findViewById(R.id.temp_submit_button).setOnClickListener(this);//the "send" imageview
+        rootView.findViewById(R.id.submit).setOnClickListener(this);//the "send" imageview
         //rootView.findViewById(R.id.).serOnClickListener(this); //for selecting an image.  likely not needed
         builder.setView(rootView);
         return builder.create();
@@ -54,7 +53,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
     @Override
     public void onClick(View v){ //the listener for sending confession
         switch(v.getId()){
-            case R.id.temp_submit_button: //the send button
+            case R.id.submit: //the send button
                 submitConfession();
                 break;
             //in need of another case, will put one here
@@ -75,7 +74,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
 
                         if(userInfo.getActive() == true){
                             final String confessionsID = DatabaseUsage.findUser_ID();
-                            TextView confessDialog = (TextView) rootView.findViewById(R.id.temp_edit);//layout attribute where the user types in his confession
+                            TextView confessDialog = (TextView) rootView.findViewById(R.id.confession_text);//layout attribute where the user types in his confession
 
 
                             String text = confessDialog.getText().toString();
