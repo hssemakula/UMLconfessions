@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "691289616795",
+    "firebase_url": "https://umlconfessions-b3b81.firebaseio.com",
+    "project_id": "umlconfessions-b3b81",
+    "storage_bucket": "umlconfessions-b3b81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691289616795:android:bb45d50515a49806",
+        "android_client_info": {
+          "package_name": "com.example.hillary.umlconfessions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691289616795-c3vu5nqe4dhm8jgcqb8qhf7db9m1264c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hillary.umlconfessions",
+            "certificate_hash": "398e337d7e66d40279c92951d659043d5969d3b0"
+          }
+        },
+        {
+          "client_id": "691289616795-mun53vhhfk5q19qgog4rkekksk3ql44c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUe8UTyvNMINntxnNXjtRxER-DdQvNp4o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691289616795-mun53vhhfk5q19qgog4rkekksk3ql44c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
