@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hillary.umlconfessions.R;
 import com.example.hillary.umlconfessions.frameworks.Confessions;
@@ -75,7 +76,6 @@ public class Setup extends Fragment {
         confessionsAdaper = new FirebaseRecyclerAdapter<Confessions, ConfessionsHolder>(
                 Confessions.class, R.layout.post_layout, ConfessionsHolder.class, DatabaseUsage.findConfession()){
 
-
             @Override
             protected void populateViewHolder(ConfessionsHolder cHolder, final Confessions framework, int x){
                 cHolder.setContent_Text(framework.getConfessionText());
@@ -95,8 +95,11 @@ public class Setup extends Fragment {
                 cHolder.comments_layout.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
-                        Intent i = new Intent(getContext(), ConfessionsActivity.class);
-                        i.putExtra(Strings_Reference.ADD_CONFESSIONS, framework);
+                        Intent i;
+
+                            i = new Intent(getContext(), ConfessionsActivity.class);
+
+                       i.putExtra(Strings_Reference.ADD_CONFESSIONS, framework);
                        startActivity(i);
                     }
                 });
@@ -170,7 +173,7 @@ public class Setup extends Fragment {
             //confessionsImageView = (ImageView) itemView.findViewById(R.id.);
             Time_Text = (TextView) itemView.findViewById(R.id.time_ago);
             like_layout = (LinearLayout) itemView.findViewById(R.id.vote_layout);
-            comments_layout = (LinearLayout) itemView.findViewById(R.id.comment_layout);
+            comments_layout = (LinearLayout) itemView.findViewById(R.id.confession_comment__layout);
             like_Count_Text = (TextView) itemView.findViewById(R.id.vote_size);
             comments_Count_Text = (TextView) itemView.findViewById(R.id.comment_number);
             content_Text = (TextView) itemView.findViewById(R.id.post_text);

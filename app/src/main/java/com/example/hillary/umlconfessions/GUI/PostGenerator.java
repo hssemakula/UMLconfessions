@@ -84,7 +84,14 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
                     public void onDataChange(DataSnapshot dataSnapshot){
                         UserInfo userInfo = dataSnapshot.getValue(UserInfo.class);
 
-                        Toast.makeText(getActivity(),"3", Toast.LENGTH_LONG).show();
+                        if(userInfo==null){
+
+                            Toast.makeText(getActivity(), "theres the problem", Toast.LENGTH_LONG).show();
+                        }
+
+
+
+
                         if(userInfo.getActive() == true){
                             Toast.makeText(getActivity(),"4", Toast.LENGTH_LONG).show();
                             final String confessionsID = DatabaseUsage.findUser_ID();

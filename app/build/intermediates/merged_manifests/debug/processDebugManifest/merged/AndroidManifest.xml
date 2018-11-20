@@ -45,8 +45,6 @@
         </activity>
         <activity android:name="com.example.hillary.umlconfessions.LogInActivity" />
         <activity android:name="com.example.hillary.umlconfessions.GUI.ConfessionsActivity" />
-        <!-- <activity android:name=".SplashScreenActivity"> -->
-
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
