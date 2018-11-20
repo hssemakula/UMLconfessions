@@ -1,54 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+
+<LinearLayout
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_post_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:maxHeight="170dp"
+    android:id="@+id/post"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="7dp"
-    android:elevation="30dp"
-    android:maxHeight="170dp"
-    card_view:cardCornerRadius="10dp">
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/location_icon"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:src="@drawable/ic_post_location"
+            android:color="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/post_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="3dp"
+            android:paddingEnd="0dp"
+            android:text="@string/sample_location"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/sample_time_passed"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal"
-            android:paddingTop="5dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/location_icon"
-                android:paddingStart="10dp"
-                android:paddingEnd="0dp"
-                android:src="@drawable/ic_post_location" />
-
-            <TextView
-                android:id="@+id/post_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="3dp"
-                android:paddingEnd="0dp"
-                android:text="@string/sample_location"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/time_ago"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:paddingEnd="0dp"
-                android:text="@string/sample_time_passed"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        android:layout_margin="7dp"
+        android:elevation="30dp"
+        android:maxHeight="170dp"
+        card_view:cardCornerRadius="10dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -69,13 +77,13 @@
                 android:lineSpacingMultiplier="1.15"
                 android:maxLines="6"
                 android:padding="10dp"
-                android:text="@string/sample_text_long"
+                android:text="@string/sample_text"
                 android:textSize="14sp" />
 
             <!--  center up and down vote vertically  WITH  android:layout_alignParentRight-->
             <LinearLayout
                 android:id="@+id/vote_layout"
-                android:layout_width="30dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
@@ -85,9 +93,9 @@
 
                 <Button
                     android:id="@+id/up_vote"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="3dp"
                     android:background="@drawable/ic_keyboard_arrow_up_black"
                     android:textStyle="bold" />
 
@@ -95,62 +103,66 @@
                     android:id="@+id/vote_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="3dp"
                     android:text="@string/sample_comment_size"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/down_vote"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
         </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
 
-            <LinearLayout
-                android:id="@+id/confession_comment__layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:orientation="horizontal"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp">
-
-                <Button
-                    android:id="@+id/comment_button"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:background="@drawable/ic_post_comment"
-                    android:paddingBottom="10dp" />
-
-                <TextView
-                    android:id="@+id/comment_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="4dp"
-                    android:paddingTop="0dp"
-                    android:paddingEnd="4dp"
-                    android:text="@string/sample_comment_size"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/confession_comment__layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <Button
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/ic_flag_black_24dp" />
+                android:id="@+id/comment_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_post_comment"
+                android:paddingBottom="10dp"
+                android:backgroundTint="@color/colorPrimary"/>
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/comment_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="4dp"
+                android:text="@string/sample_comment_size"
+                android:textSize="15sp" />
 
-    </LinearLayout>
-</android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_flag_black_24dp"
+            android:backgroundTint="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

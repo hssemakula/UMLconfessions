@@ -1141,7 +1141,6 @@ id bottom
 id button
 id buttonPanel
 id cancel_action
-id card_post_container
 id center
 id center_horizontal
 id center_vertical
@@ -1163,7 +1162,6 @@ id comment_up_vote
 id comment_vote_layout
 id comment_vote_size
 id confession_comment__layout
-id confession_comment_layout
 id confession_text
 id container
 id content
