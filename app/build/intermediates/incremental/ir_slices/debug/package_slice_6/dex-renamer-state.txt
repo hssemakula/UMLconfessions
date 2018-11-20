@@ -1,4 +1,4 @@
-#Mon Nov 19 13:45:33 EST 2018
-base.0=C\:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+#Mon Nov 19 16:51:19 EST 2018
+base.0=C\:\\Users\\Mike\\AndroidStudioProjects\\UMLconfessions-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

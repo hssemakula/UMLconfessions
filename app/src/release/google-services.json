@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "691289616795-ff5mvqabu7q7gilcubtjclcrfrrsmhpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hillary.umlconfessions",
+            "certificate_hash": "1c807ee791bfc1bcc6d0756a10d44190628e9752"
+          }
+        },
+        {
           "client_id": "691289616795-mun53vhhfk5q19qgog4rkekksk3ql44c.apps.googleusercontent.com",
           "client_type": 3
         }

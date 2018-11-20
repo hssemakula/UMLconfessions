@@ -53,8 +53,10 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
     @Override
     public void onClick(View v){ //the listener for sending confession
         switch(v.getId()){
-            case R.id.submit: //the send button
+
+            case R.id.submit: //the send button;
                 submitConfession();
+
                 break;
             //in need of another case, will put one here
         }
@@ -66,13 +68,25 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         myProgressDialog.setIndeterminate(true);
         myProgressDialog.show();
 
+        Toast.makeText(getActivity(),DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",","), Toast.LENGTH_LONG).show();
+
+        //Toast.makeText(getActivity(),userInfo.getActive().toString(), Toast.LENGTH_LONG).show();
+
+        if(DatabaseUsage.findUserInfo(DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",","))== null){
+            Toast.makeText(getActivity(),"null",Toast.LENGTH_LONG).show();
+        }
+
         DatabaseUsage.findUserInfo(DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",",")).addListenerForSingleValueEvent(
                 new ValueEventListener(){
+
+
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot){
                         UserInfo userInfo = dataSnapshot.getValue(UserInfo.class);
 
+                        Toast.makeText(getActivity(),"3", Toast.LENGTH_LONG).show();
                         if(userInfo.getActive() == true){
+                            Toast.makeText(getActivity(),"4", Toast.LENGTH_LONG).show();
                             final String confessionsID = DatabaseUsage.findUser_ID();
                             TextView confessDialog = (TextView) rootView.findViewById(R.id.confession_text);//layout attribute where the user types in his confession
 
@@ -104,6 +118,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
 
                     @Override
                     public void onCancelled(DatabaseError databaseError){
+                        Toast.makeText(getActivity(),databaseError.toString(), Toast.LENGTH_LONG).show();
                         myProgressDialog.dismiss();
                     }
 

@@ -1050,6 +1050,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_a_photo_black_24dp
 drawable ic_add_black_24dp
 drawable ic_exit
 drawable ic_feed
@@ -1161,6 +1162,7 @@ id comment_time_passed
 id comment_up_vote
 id comment_vote_layout
 id comment_vote_size
+id confession_text
 id container
 id content
 id contentPanel
@@ -1310,6 +1312,7 @@ id start
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id tabMode
 id tag_transition_group
@@ -1501,6 +1504,7 @@ string action_sign_in_short
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string cancel
 string character_counter_content_description
 string character_counter_pattern
 string client_id
@@ -1523,6 +1527,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confess
 string default_web_client_id
 string error_field_required
 string error_incorrect_password
@@ -1577,8 +1582,10 @@ string title_activity_test
 string title_activity_view_posts_activity
 string to_be_coded_in
 string to_be_coded_in_email_com
+string todo
 string user_tag
 string username_hint
+string what_s_on_your_mind
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
