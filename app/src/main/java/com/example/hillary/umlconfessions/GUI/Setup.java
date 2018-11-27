@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.example.hillary.umlconfessions.R;
 import com.example.hillary.umlconfessions.frameworks.Confessions;
@@ -84,7 +84,7 @@ public class Setup extends Fragment {
 
     private void makeAdapter() {
         confessionsAdaper = new FirebaseRecyclerAdapter<Confessions, ConfessionsHolder>(
-                Confessions.class, R.layout.post_layout, ConfessionsHolder.class, DatabaseUsage.findConfession()) {
+                Confessions.class, R.layout.post_layout_alternative, ConfessionsHolder.class, DatabaseUsage.findConfession()) {
 
             @Override
             protected void populateViewHolder(ConfessionsHolder cHolder, final Confessions framework, int x) {
@@ -114,8 +114,6 @@ public class Setup extends Fragment {
                     }
                 });
             }
-
-
         };
     }
 
@@ -239,7 +237,7 @@ public class Setup extends Fragment {
             int dividerRight = parent.getWidth() - parent.getPaddingRight();
 
             int childCount = parent.getChildCount();
-            for (int i = 0; i < childCount - 1; i++) {
+            for (int i = 0; i < childCount; i++) {
                 View child = parent.getChildAt(i);
 
                 RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
