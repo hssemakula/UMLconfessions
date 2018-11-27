@@ -1504,6 +1504,10 @@
         "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\f6aa8559c61fe74ad4816a83dc326014\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
+        "merged": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete_forever_black_24dp.xml.flat",
+        "source": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\src\\main\\res\\drawable\\ic_delete_forever_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },

@@ -1052,6 +1052,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_add_a_photo_black_24dp
 drawable ic_add_black_24dp
+drawable ic_delete_forever_black_24dp
 drawable ic_exit
 drawable ic_feed
 drawable ic_fingerprint_black_24dp
@@ -1173,6 +1174,7 @@ id customPanel
 id dark
 id decor_content_parent
 id default_activity_button
+id delete_account
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1531,6 +1533,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confess
 string default_web_client_id
+string delete_account
 string error_field_required
 string error_incorrect_password
 string error_invalid_email
@@ -1578,6 +1581,7 @@ string settings
 string splash_desc
 string status_bar_notification_info_overflow
 string terms_and_conditions
+string terms_and_conditions_full_string
 string terms_and_conditions_here
 string title_activity_log_in
 string title_activity_test

@@ -49,4 +49,6 @@
     <string name="confess">Confess</string>
     <string name="cancel">Cancel</string>
     <string name="todo">TODO</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="terms_and_conditions_full_string">1. you have to agree to the terms and conditions before using the app 2.Targeted Harassment will make you subject to disciplinary action 3.Threats of violence will result in a permanent ban 4. posting personal information will make you subject to disciplinary action 5. spamming will make you subject to disciplinary action 6. This app is compliant with all US laws including libel laws 7. This app is only for use by Umass Lowell students I came up with that without looking at other Terms for reference so I may have missed some important ones You can put that in the terms section, i\'m probably going to revise it later</string>
 </resources>
