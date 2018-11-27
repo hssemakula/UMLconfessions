@@ -78,7 +78,8 @@
                 android:maxLines="6"
                 android:padding="10dp"
                 android:text="@string/sample_text"
-                android:textSize="14sp" />
+                android:textColor="#000"
+                android:textSize="16sp" />
 
             <!--  center up and down vote vertically  WITH  android:layout_alignParentRight-->
             <LinearLayout
@@ -93,9 +94,8 @@
 
                 <Button
                     android:id="@+id/up_vote"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="3dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:background="@drawable/ic_keyboard_arrow_up_black"
                     android:textStyle="bold" />
 
@@ -103,16 +103,15 @@
                     android:id="@+id/vote_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginBottom="3dp"
+                    android:layout_marginStart="11.5dp"
                     android:text="@string/sample_comment_size"
-                    android:textSize="25sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/down_vote"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
                     android:textStyle="bold" />
             </LinearLayout>

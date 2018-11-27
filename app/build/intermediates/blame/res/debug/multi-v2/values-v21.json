@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Hillary\\UMLconfessions\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3322c2a924da87f838b2ba9170de7db2\\res\\values-v21\\values-v21.xml",
@@ -42,23 +42,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Hillary\\UMLconfessions\\app\\src\\main\\res\\values-v21\\strings.xml",
-                    "from": {
-                        "startLines": "6,9,4,7,8,5,2,3",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "347,504,195,386,433,266,57,116",
-                        "endColumns": "37,43,69,45,69,79,57,77",
-                        "endOffsets": "380,543,260,427,498,341,110,189"
-                    },
-                    "to": {
-                        "startLines": "6,7,8,9,10,11,12,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "354,392,436,506,552,622,702,760",
-                        "endColumns": "37,43,69,45,69,79,57,77",
-                        "endOffsets": "387,431,501,547,617,697,755,833"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\e9bd395a675e7b707337c90ccc3754f8\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,10,18,26",
@@ -75,6 +58,23 @@
                         "endLines": "294,302,310,318",
                         "endColumns": "10,10,10,10",
                         "endOffsets": "21332,21758,22181,22616"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\src\\main\\res\\values-v21\\strings.xml",
+                    "from": {
+                        "startLines": "6,9,4,7,8,5,2,3",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "347,504,195,386,433,266,57,116",
+                        "endColumns": "37,43,69,45,69,79,57,77",
+                        "endOffsets": "380,543,260,427,498,341,110,189"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "354,392,436,506,552,622,702,760",
+                        "endColumns": "37,43,69,45,69,79,57,77",
+                        "endOffsets": "387,431,501,547,617,697,755,833"
                     }
                 },
                 {

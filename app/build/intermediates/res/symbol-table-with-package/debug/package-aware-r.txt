@@ -1074,6 +1074,7 @@ drawable ic_terms
 drawable ic_thumb_down
 drawable ic_thumb_up
 drawable inp_rou
+drawable item_divider
 drawable login_bg
 drawable login_bg2
 drawable login_bg_land

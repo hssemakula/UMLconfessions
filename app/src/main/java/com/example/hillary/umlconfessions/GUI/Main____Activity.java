@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 
 
 import com.example.hillary.umlconfessions.LogInActivity;
+import com.example.hillary.umlconfessions.SettingsFragment;
+import com.example.hillary.umlconfessions.TermsFragment;
 import com.example.hillary.umlconfessions.frameworks.UserInfo;
 import com.example.hillary.umlconfessions.tools.DatabaseUsage;
 import com.example.hillary.umlconfessions.tools.OnlineFunctionality;
@@ -34,6 +36,7 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
     private FirebaseAuth.AuthStateListener auth;
     private TextView nameView;
     private TextView emailView;
+    private DrawerLayout drawer;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +78,11 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-        drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.menu);
@@ -123,16 +126,33 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
         }
 
-        @Override
-        public void onBackPressed() {
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START);
-            } else {
-                super.onBackPressed();
-            }
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch(menuItem.getItemId()){
+            case R.id.feed:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Setup()).commit();
+                break;
+
+
+            case R.id.terms:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TermsFragment()).commit();
+                break;
+
+
+            case R.id.settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+                break;
+
+
+            case R.id.log_out:
+                Intent intent = new Intent(this, LogInActivity.class);
+                startActivity(intent);
+                this.finish();
         }
 
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 /*
 
         @Override
@@ -170,34 +190,19 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
         */
 
-            //@SupressWarnings("StatementWithEmptyBody")
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item){
 
-                /*
-                int id = item.getItemId();
 
-                if(id == R.id.nav_camera){
+    //when back button is pressed nd menu is open, app doesn't close.
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
-                } else if (id == R.id.nav_gallery){
 
-                } else if (id == R.id.nav_slideshow){
-
-                } else if (id == R.id.nav_manage){
-
-                } else if (id == R.id.nav_send){
-
-                }
-
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-
-                */
-                return true;
-
-            }
-
-   // }
 
     @Override
     protected void onStart(){
