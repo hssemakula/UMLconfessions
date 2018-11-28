@@ -146,16 +146,7 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
                 toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Fragment current_fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-                        ;
-                        if (current_fragment instanceof SettingsFragment) {
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Setup()).commit();
-                            showBackButon(false);
-                            navigationView.setCheckedItem(R.id.feed);
-                        }
-                        else if(current_fragment instanceof TermsFragment) {
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-                        }
+                        onBackPressed();
                     }
                 });
 
@@ -249,7 +240,16 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
     //when back button is pressed nd menu is open, app doesn't close.
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        Fragment current_fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        if (current_fragment instanceof SettingsFragment) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Setup()).commit();
+            showBackButon(false);
+            navigationView.setCheckedItem(R.id.feed);
+        }
+        else if(current_fragment instanceof TermsFragment) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+        }
+        else if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
