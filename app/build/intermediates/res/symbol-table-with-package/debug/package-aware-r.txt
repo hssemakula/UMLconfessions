@@ -1070,6 +1070,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_person_black_24dp
 drawable ic_post_comment
 drawable ic_post_location
+drawable ic_send_black
 drawable ic_settings_black_24dp
 drawable ic_terms
 drawable ic_thumb_down
@@ -1164,6 +1165,7 @@ id comment_up_vote
 id comment_vote_layout
 id comment_vote_size
 id confession_comment__layout
+id confession_comment_layout
 id confession_text
 id container
 id content
@@ -1186,6 +1188,7 @@ id disableHome
 id down_vote
 id drawer_layout
 id edit_query
+id edit_text_for_comments
 id email
 id end
 id end_padder
@@ -1317,6 +1320,7 @@ id stretch
 id submenuarrow
 id submit
 id submit_area
+id submit_button_for_comments
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1328,6 +1332,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id text_input_password_toggle
+id text_of_the_post
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1429,6 +1434,7 @@ layout design_text_input_password_icon
 layout log_in
 layout log_in_alternative
 layout menu_header
+layout mikes_changes_view_post_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

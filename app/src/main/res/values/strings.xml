@@ -1,54 +1,98 @@
 <resources>
     <string name="app_name">Uml Confessions</string>
+
     <string name="login_string">LOGIN</string>
+
     <string name="username_hint">username</string>
+
     <string name="password_hint">password</string>
+
     <string name="splash_desc">splash logo</string>
+
     <string name="logo_header">Logo Header</string>
+
     <string name="title_activity_view_posts_activity">view_posts_activity</string>
+
     <string name="title_activity_log_in">Sign in</string>
+
     <!-- Strings related to login -->
+
+
     <string name="prompt_email">Email</string>
+
     <string name="prompt_password">Password (optional)</string>
+
     <string name="action_sign_in">Sign in or register</string>
+
     <string name="action_sign_in_short">Sign in</string>
+
     <string name="error_invalid_email">This email address is invalid</string>
+
     <string name="error_invalid_password">This password is too short</string>
+
     <string name="error_incorrect_password">This password is incorrect</string>
+
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+
+    <string name="permission_rationale">"Contacts permissions are needed for providing emailcompletions." </string>
+
     <string name="title_activity_test">test</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
+
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="nav_header_title">Android Studio</string>
+
     <string name="nav_header_subtitle">android.studio@android.com</string>
+
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
+
     <string name="to_be_coded_in">To be coded in</string>
+
     <string name="to_be_coded_in_email_com">To be coded in@email.com</string>
+
     <string name="profile_picture_desc">profile_picture_desc</string>
 
     <string name="open_navigation_drawer"> open navigation drawer </string>
+
     <string name="close_navigation_drawer"> close navigation drawer </string>
+
     <string name="terms_and_conditions_here">TERMS AND CONDITIONS HERE</string>
+
     <string name="feed">Feed</string>
+
     <string name="settings">Settings</string>
+
     <string name="terms_and_conditions">Terms and Conditions</string>
+
     <string name="log_out">Log out</string>
+
     <string name="sample_text">This is a sample post. When the recycler view is complete, This will be filled with text from the server.</string>
+
     <string name="sample_comment_size">3</string>
+
     <string name="sample_text_long"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
     <string name="location_icon">location icon</string>
+
     <string name="sample_location">location</string>
+
     <string name="sample_time_passed">20m</string>
+
     <string name="user_tag">TAG</string>
     <string name="client_id">691289616795-ff5mvqabu7q7gilcubtjclcrfrrsmhpi.apps.googleusercontent.com</string>
     <string name="what_s_on_your_mind">What\'s on your mind</string>
+
     <string name="confess">Confess</string>
+
     <string name="cancel">Cancel</string>
+
     <string name="todo">TODO</string>
+
     <string name="delete_account">Delete Account</string>
+
     <string name="terms_and_conditions_full_string">1. you have to agree to the terms and conditions before using the app 2.Targeted Harassment will make you subject to disciplinary action 3.Threats of violence will result in a permanent ban 4. posting personal information will make you subject to disciplinary action 5. spamming will make you subject to disciplinary action 6. This app is compliant with all US laws including libel laws 7. This app is only for use by Umass Lowell students I came up with that without looking at other Terms for reference so I may have missed some important ones You can put that in the terms section, i\'m probably going to revise it later</string>
 </resources>

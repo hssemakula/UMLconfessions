@@ -1,5 +1,29 @@
 package com.example.hillary.umlconfessions.GUI;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
+
+
+import com.example.hillary.umlconfessions.LogInActivity;
+import com.example.hillary.umlconfessions.frameworks.UserInfo;
+import com.example.hillary.umlconfessions.tools.DatabaseUsage;
+import com.example.hillary.umlconfessions.tools.OnlineFunctionality;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +53,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
+
 import com.example.hillary.umlconfessions.R;
 
 public class Main____Activity extends OnlineFunctionality implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,6 +69,8 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
     private ActionBarDrawerToggle toggle;
     private boolean mToolBarNavigationListenerIsRegistered = false;
     private NavigationView navigationView;
+
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,11 +110,13 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
     });*/
 
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
+        //drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.menu);
@@ -95,41 +124,44 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
         View view = navigationView.getHeaderView(0);
         startNav(view);
-        }
 
-    private void start() {
-        if (firebaseUser != null) {
-            databaseReference = DatabaseUsage.findUserInfo(firebaseUser.getEmail().replace(".", ","));
-        }
     }
 
+        private void start(){
+            if (firebaseUser!=null){
+                databaseReference = DatabaseUsage.findUserInfo(firebaseUser.getEmail().replace(".",","));
+            }
+        }
 
-    private void startNav(View v) {
-        imageView = (ImageView) v.findViewById(R.id.profpic);
-        nameView = (TextView) v.findViewById(R.id.name);
-        emailView = (TextView) v.findViewById(R.id.email);
 
-        eventListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot d) {
-                if (d.getValue() != null) {
-                    UserInfo g = d.getValue(UserInfo.class);
-                    nameView.setText(g.getUserInfo());
-                    emailView.setText(g.getEmail_address());
+
+        private void startNav(View v) {
+            imageView = (ImageView) v.findViewById(R.id.profpic);
+            nameView = (TextView) v.findViewById(R.id.name);
+            emailView = (TextView) v.findViewById(R.id.email);
+
+            eventListener = new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot d) {
+                    if (d.getValue() != null) {
+                        UserInfo g = d.getValue(UserInfo.class);
+                        nameView.setText(g.getUserInfo());
+                        emailView.setText(g.getEmail_address());
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
+                @Override
+                public void onCancelled(DatabaseError error) {
 
-            }
+                }
 
 
-        };
+            };
 
-    }
+        }
 
-//Back button
+
+    //Back button
     private void showBackButon(boolean enable) {
         if (enable) {
             //You may not want to open the drawer on swipe from the left in this case
@@ -190,7 +222,7 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
                 break;
 
 
-            case R.id.log_out:
+            case R.id.log_out: //Have to make user  = null to be actually logged out, I think
                 Intent intent = new Intent(this, LogInActivity.class);
                 startActivity(intent);
                 this.finish();
@@ -199,6 +231,26 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    @Override
+        public void onBackPressed() {
+        Fragment current_fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        if (current_fragment instanceof SettingsFragment) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Setup()).commit();
+            showBackButon(false);
+            navigationView.setCheckedItem(R.id.feed);
+        }
+        else if(current_fragment instanceof TermsFragment) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+        }
+        else if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+        }
+
 /*
 
         @Override
@@ -236,47 +288,56 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
         */
 
+            //@SupressWarnings("StatementWithEmptyBody")
+           // @Override
+            //public boolean onNavigationItemSelected(MenuItem item){
 
-    //when back button is pressed nd menu is open, app doesn't close.
+                /*
+                int id = item.getItemId();
+
+                if(id == R.id.nav_camera){
+
+                } else if (id == R.id.nav_gallery){
+
+                } else if (id == R.id.nav_slideshow){
+
+                } else if (id == R.id.nav_manage){
+
+                } else if (id == R.id.nav_send){
+
+                }
+
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+                */
+              //  return true;
+
+            //}
+
+   // }
+
     @Override
-    public void onBackPressed() {
-        Fragment current_fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-        if (current_fragment instanceof SettingsFragment) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Setup()).commit();
-            showBackButon(false);
-            navigationView.setCheckedItem(R.id.feed);
-        }
-        else if(current_fragment instanceof TermsFragment) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-        }
-        else if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+    protected void onStart(){
+       super.onStart();
+       firebaseAuth.addAuthStateListener(auth);
+       if(databaseReference!=null){
+           databaseReference.addValueEventListener(eventListener);
+
+       }
     }
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        firebaseAuth.addAuthStateListener(auth);
-        if (databaseReference != null) {
-            databaseReference.addValueEventListener(eventListener);
-
-        }
-    }
-
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        if (auth != null) {
-            firebaseAuth.removeAuthStateListener(auth);
-        }
-        if (databaseReference != null) {
-            databaseReference.removeEventListener(eventListener);
-        }
+    protected void onStop(){
+                super.onStop();
+                if(auth!=null){
+                    firebaseAuth.removeAuthStateListener(auth);
+                }
+                if(databaseReference!=null){
+                    databaseReference.removeEventListener(eventListener);
+                }
     }
 
 }

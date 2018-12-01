@@ -10,11 +10,9 @@ import android.view.View;
 import android.app.ProgressDialog;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.hillary.umlconfessions.R;
 import com.example.hillary.umlconfessions.frameworks.Comments;
 import com.example.hillary.umlconfessions.frameworks.Confessions;
@@ -41,7 +39,7 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.view_post_fragment); //subject to change
+        setContentView(R.layout.mikes_changes_view_post_fragment); //subject to change
 
 
 
@@ -74,7 +72,7 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
                 commentsHolder.setThe_time(DateUtils.getRelativeTimeSpanString(framework.getTime_of_creation()));
                 //also will do the time here
 
-                Glide.with(ConfessionsActivity.this).load(framework.getUserInfo().getP()).into(commentsHolder.imageView);
+               // Glide.with(ConfessionsActivity.this).load(framework.getUserInfo().getP()).into(commentsHolder.imageView);
             }
         };
 
@@ -84,16 +82,17 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
     private void startConfession(){
        // ImageView imageView = (ImageView)findViewById(R.id.);
        // TextView textView = (TextView) findViewById(R.id);
-        TextView Time_of_Creation_View = (TextView) findViewById(R.id.time_ago);
+        TextView Time_of_Creation_View = (TextView) findViewById(R.id.time_passed);
        // ImageView imageView2 = (ImageView) findViewById(R.id); // not needed
        // LinearLayout confessionLikeLayout = (LinearLayout) findViewById(R.id.);
        // LinearLayout confessionCommentLayout = (LinearLayout) findViewById(R.id.);
         TextView confession_Like_Count_View = (TextView) findViewById(R.id.vote_size);
         TextView confession_Comment_Count_View = (TextView) findViewById(R.id.comment_number);
-        TextView confession_Text_View = (TextView) findViewById(R.id.post_text);
+        TextView confession_Text_View = (TextView) findViewById(R.id.text_of_the_post);
 
+        
+            Time_of_Creation_View.setText(DateUtils.getRelativeTimeSpanString(confessionsFramework.getTime_Of_Creation()));
 
-        Time_of_Creation_View.setText(DateUtils.getRelativeTimeSpanString(confessionsFramework.getTime_Of_Creation()));
         confession_Text_View.setText(confessionsFramework.getConfessionText());
 
         confession_Like_Count_View.setText(String.valueOf(confessionsFramework.getLikeCount()));
@@ -105,15 +104,15 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void start(){
-       // myModifyTextView = (EditText) findViewById(R.id.); //comment text to edit
-       // findViewById(R.id.).setOnClickListener(this); //send button
+       myModifyTextView = (EditText) findViewById(R.id.edit_text_for_comments); //comment text to edit
+       findViewById(R.id.submit_button_for_comments).setOnClickListener(this); //send button
 
     }
 
     @Override
     public void onClick(View view){
         switch(view.getId()){
-           // case R.id.: submitComment(); //id = send button
+            case R.id.submit_button_for_comments: submitComment(); //id = send button
         }
     }
 
@@ -181,7 +180,7 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
 
         public CommentsHolder(View itemView){
             super(itemView);
-            the_time = (TextView) itemView.findViewById(R.id.time_ago);  //the time
+            the_time = (TextView) itemView.findViewById(R.id.comment_time_passed);  //the time
             the_comment = (TextView) itemView.findViewById(R.id.comment_text_here);  //the comment
 
         }

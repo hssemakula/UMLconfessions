@@ -47,9 +47,7 @@ public class DatabaseUsage {
     }
 
     public static DatabaseReference findComment(String commentId){
-     return FirebaseDatabase.getInstance().getReference(Strings_Reference.USERINFO_RECORD).child(findCurrentUserInfo().getEmail().replace(".",","));
-
-
+     return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_COMMENTS).child(commentId);
     }
 
     public static DatabaseReference findMyRecord(){
@@ -68,7 +66,7 @@ public class DatabaseUsage {
                 records = new ArrayList<String>(1);
                 records.add(ID);
             }else{
-                records = (ArrayList<String>)mutableData.getValue();
+                records = (ArrayList<String>) mutableData.getValue();
                 records.add(ID);
             }
 
