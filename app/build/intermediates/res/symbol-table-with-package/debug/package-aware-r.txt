@@ -1058,7 +1058,9 @@ drawable ic_feed
 drawable ic_fingerprint_black_24dp
 drawable ic_flag_black_24dp
 drawable ic_keyboard_arrow_down_black_24dp
+drawable ic_keyboard_arrow_down_blue_24dp
 drawable ic_keyboard_arrow_up_black
+drawable ic_keyboard_arrow_up_blue
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_lock_black_24dp

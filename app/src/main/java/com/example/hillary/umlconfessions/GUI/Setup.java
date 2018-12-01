@@ -1,7 +1,9 @@
 package com.example.hillary.umlconfessions.GUI;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -55,7 +57,8 @@ import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
 
-
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Setup extends Fragment {
@@ -65,6 +68,9 @@ public class Setup extends Fragment {
     private LinearLayoutManager layoutManager;
 
     private Drawable dividerDrawable;
+
+    private boolean allowClick=true;
+    private boolean allowClickToo=true;
 
     public Setup(){
 
@@ -115,18 +121,158 @@ public class Setup extends Fragment {
                 Confessions.class, R.layout.post_layout_alternative, ConfessionsHolder.class, DatabaseUsage.findConfession()){
 
             @Override
-            protected void populateViewHolder(ConfessionsHolder cHolder, final Confessions framework, int x){
+            protected void populateViewHolder(final ConfessionsHolder cHolder, final Confessions framework, int x){
                 cHolder.setContent_Text(framework.getConfessionText());
                 cHolder.setTime_Text(DateUtils.getRelativeTimeSpanString(framework.getTime_Of_Creation()));
                 cHolder.setComments_Count_Text(String.valueOf(framework.getCommentCount()));
                 cHolder.setLike_Count_Text(String.valueOf(framework.getLikeCount()));
 
 
-                cHolder.like_button.setOnClickListener(new View.OnClickListener(){
+
+
+                cHolder.dislike_button.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View view){
-                        upvote(framework.getConfessionID());
+                        final Button theButton = cHolder.like_button;
+                        final Button theButtonToo = cHolder.dislike_button;
+                        theButton.setEnabled(false);
+                        theButtonToo.setEnabled(false);
+
+                        if(allowClickToo==true) {
+                            allowClickToo=false;
+
+                            downvote(framework.getConfessionID());
+                            DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                                @Override
+                                public void onDataChange(DataSnapshot d) {
+
+
+                                    if (d.getValue() != null) {
+
+                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+
+
+                                    } /*else {
+
+                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                        }*/
+
+                                }
+                                @Override
+                                public void onCancelled (DatabaseError databaseError){
+
+                                }
+                            });
+
+                            allowClickToo=true;
+                        }
+
+
+
+                        Timer theTimer = new Timer();
+                        theTimer.schedule(new TimerTask(){
+
+
+
+                            @Override
+                            public void run() {
+                                getActivity().runOnUiThread(new Runnable() {
+
+
+                                    @Override
+                                    public void run() {
+
+
+
+                                        (theButton).setEnabled(true);
+                                        (theButtonToo).setEnabled(true);
+                                    }
+                                });
+                            }
+                        },430);
+
+
+
+                    }
+                });
+
+                cHolder.like_button.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view) {
+                        final Button theButton = cHolder.like_button;
+                        final Button theButtonToo = cHolder.dislike_button;
+                        theButton.setEnabled(false);
+                        theButtonToo.setEnabled(false);
+
+                        if (allowClickToo == true) {
+                            allowClickToo = false;
+                            upvote(framework.getConfessionID());
+                            
+
+                            DatabaseUsage.findConfessionLiked(framework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                                @Override
+                                public void onDataChange(DataSnapshot d) {
+
+
+                                    if (d.getValue() != null) {
+
+                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
+
+
+                                    } /*else {
+
+                            cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                        }*/
+
+                                }
+                                @Override
+                                public void onCancelled (DatabaseError databaseError){
+
+                                }
+                            });
+
+
+
+
+                            allowClickToo = true;
+                        }
+
+
+
+Timer theTimer = new Timer();
+theTimer.schedule(new TimerTask(){
+
+
+
+
+
+                            @Override
+                            public void run() {
+                                getActivity().runOnUiThread(new Runnable() {
+
+
+                                    @Override
+                                    public void run() {
+
+
+
+                                        (theButton).setEnabled(true);
+                                        (theButtonToo).setEnabled(true);
+                                    }
+                                });
+                            }
+                        },430);
+
+
+
                     }
                 });
 
@@ -141,6 +287,8 @@ public class Setup extends Fragment {
                        startActivity(i);
                     }
                 });
+
+
             }
 
 
@@ -148,51 +296,213 @@ public class Setup extends Fragment {
     }
 
     private void upvote(final String s){
-        DatabaseUsage.findConfessionLiked(s).addListenerForSingleValueEvent(new ValueEventListener() {
 
-            @Override
-            public void onDataChange(DataSnapshot d){
-                if(d.getValue()!=null){
-                    DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler(){
-                        @Override
-                        public Transaction.Result doTransaction(MutableData m){
-                            long z = (long) m.getValue();
-                            m.setValue(z-1);
-                            return Transaction.success(m);
+        if(allowClick == true) {
+            allowClick = false;
 
-                        }
 
-                        @Override
-                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d){
-                            DatabaseUsage.findConfessionLiked(s).setValue(null);
+            DatabaseUsage.findConfessionDisliked(s).addListenerForSingleValueEvent(new ValueEventListener() {
 
-                        }
-                    });
 
-                } else {
-                    DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler(){
-                        @Override
-                        public Transaction.Result doTransaction(MutableData m){
-                            long z = (long) m.getValue();
-                            m.setValue(z+1);
-                            return Transaction.success(m);
-                        }
+                @Override
+                public void onDataChange(DataSnapshot d) {
 
-                        @Override
-                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS){
-                            DatabaseUsage.findConfessionLiked(s).setValue(true);
-                        }
-                    });
+
+                    if (d.getValue() != null) {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z + 1);
+                                return Transaction.success(m);
+
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                DatabaseUsage.findConfessionDisliked(s).setValue(null);
+
+                            }
+                        });
+
+                    } else {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+
+                                return Transaction.success(m);
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+                                DatabaseUsage.findConfessionDisliked(s).setValue(null);
+                            }
+                        });
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError){
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
+                }
 
-        });
+            });
+
+
+            DatabaseUsage.findConfessionLiked(s).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                @Override
+                public void onDataChange(DataSnapshot d) {
+
+
+                    if (d.getValue() != null) {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z - 1);
+                                return Transaction.success(m);
+
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                DatabaseUsage.findConfessionLiked(s).setValue(null);
+
+                            }
+                        });
+
+                    } else {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z + 1);
+                                return Transaction.success(m);
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+                                DatabaseUsage.findConfessionLiked(s).setValue(true);
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+
+            });
+            allowClick = true;
+        }
+
     }
+
+    private void downvote(final String s){
+        if(allowClick == true) {
+            allowClick = false;
+
+            DatabaseUsage.findConfessionLiked(s).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(DataSnapshot d) {
+
+
+                    if (d.getValue() != null) {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z - 1);
+                                return Transaction.success(m);
+
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                DatabaseUsage.findConfessionLiked(s).setValue(null);
+
+                            }
+                        });
+
+                    } else {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+
+                                return Transaction.success(m);
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+                                DatabaseUsage.findConfessionLiked(s).setValue(null);
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+
+            });
+
+
+            DatabaseUsage.findConfessionDisliked(s).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(DataSnapshot d) {
+
+
+                    if (d.getValue() != null) {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z + 1);
+                                return Transaction.success(m);
+
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                DatabaseUsage.findConfessionDisliked(s).setValue(null);
+
+                            }
+                        });
+
+                    } else {
+                        DatabaseUsage.findConfession().child(s).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                            @Override
+                            public Transaction.Result doTransaction(MutableData m) {
+                                long z = (long) m.getValue();
+                                m.setValue(z - 1);
+                                return Transaction.success(m);
+                            }
+
+                            @Override
+                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+                                DatabaseUsage.findConfessionDisliked(s).setValue(true);
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+
+            });
+            allowClick = true;
+        }
+
+    }
+
 
 
 
@@ -200,6 +510,7 @@ public class Setup extends Fragment {
         ImageView confessionsImageView;
         TextView Time_Text;
         Button like_button;
+        Button dislike_button;
         LinearLayout comments_layout;
         TextView like_Count_Text;
         TextView comments_Count_Text;
@@ -211,6 +522,7 @@ public class Setup extends Fragment {
             //confessionsImageView = (ImageView) itemView.findViewById(R.id.);
             Time_Text = (TextView) itemView.findViewById(R.id.time_ago);
             like_button = (Button) itemView.findViewById(R.id.up_vote);
+            dislike_button = (Button) itemView.findViewById(R.id.down_vote);
             comments_layout = (LinearLayout) itemView.findViewById(R.id.post);
             like_Count_Text = (TextView) itemView.findViewById(R.id.vote_size);
             comments_Count_Text = (TextView) itemView.findViewById(R.id.comment_number);

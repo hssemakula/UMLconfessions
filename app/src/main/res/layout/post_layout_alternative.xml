@@ -89,7 +89,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/ic_keyboard_arrow_up_black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/vote_size"
@@ -106,7 +106,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
             </LinearLayout>
 
         </RelativeLayout>

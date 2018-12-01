@@ -30,6 +30,14 @@ public class DatabaseUsage {
     return findLike().child(findCurrentUserInfo().getEmail().replace(".",",")).child(confessionID);
     }
 
+    public static DatabaseReference findDislike() {
+        return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_IS_DISLIKED);
+    }
+
+    public static DatabaseReference findConfessionDisliked(String confessionID) {
+        return findDislike().child(findCurrentUserInfo().getEmail().replace(".",",")).child(confessionID);
+    }
+
     public static FirebaseUser findCurrentUserInfo(){
         return FirebaseAuth.getInstance().getCurrentUser();
     }
