@@ -112,6 +112,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main____Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ConfessionsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,24 +139,24 @@
       <file leaf-file-name="Setup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1224">
-              <caret line="214" column="28" selection-start-line="214" selection-start-column="28" selection-end-line="214" selection-end-column="28" />
+            <state relative-caret-position="1804">
+              <caret line="253" column="61" selection-start-line="253" selection-start-column="61" selection-end-line="253" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5011#8105#0" expanded="true" />
-                <element signature="e#7494#8056#0" expanded="true" />
-                <element signature="e#7660#7998#0" expanded="true" />
-                <element signature="e#7997#7998#0" expanded="true" />
-                <element signature="e#8055#8056#0" expanded="true" />
-                <element signature="e#8104#8105#0" expanded="true" />
-                <element signature="e#8164#11333#0" expanded="true" />
-                <element signature="e#10720#11284#0" expanded="true" />
-                <element signature="e#10888#11226#0" expanded="true" />
-                <element signature="e#11225#11226#0" expanded="true" />
-                <element signature="e#11283#11284#0" expanded="true" />
-                <element signature="e#11332#11333#0" expanded="true" />
-                <element signature="e#11396#11785#0" expanded="true" />
-                <element signature="e#11784#11785#0" expanded="true" />
+                <element signature="e#5046#14661#0" expanded="true" />
+                <element signature="e#14178#14740#0" expanded="true" />
+                <element signature="e#14344#14682#0" expanded="true" />
+                <element signature="e#14681#14682#0" expanded="true" />
+                <element signature="e#14739#14740#0" expanded="true" />
+                <element signature="e#14660#14661#0" expanded="true" />
+                <element signature="e#14720#24242#0" expanded="true" />
+                <element signature="e#23781#24345#0" expanded="true" />
+                <element signature="e#23949#24287#0" expanded="true" />
+                <element signature="e#24286#24287#0" expanded="true" />
+                <element signature="e#24344#24345#0" expanded="true" />
+                <element signature="e#24241#24242#0" expanded="true" />
+                <element signature="e#24305#24694#0" expanded="true" />
+                <element signature="e#24693#24694#0" expanded="true" />
                 <element signature="e#19451#19452#0" expanded="true" />
                 <element signature="e#19493#19494#0" expanded="true" />
               </folding>
@@ -152,23 +164,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posts_fragment.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/posts_fragment.xml">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="34">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="38" />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="post_layout_alternative.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout_alternative.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+            <state relative-caret-position="551">
+              <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+              <folding>
+                <element signature="e#780#803#0" expanded="true" />
+                <element signature="e#1245#1270#0" expanded="true" />
+                <element signature="e#1566#1594#0" expanded="true" />
+                <element signature="e#2611#2632#0" expanded="true" />
+                <element signature="e#3840#3869#0" expanded="true" />
+                <element signature="e#6429#6458#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -179,8 +196,8 @@
       <file leaf-file-name="ic_keyboard_arrow_down_black_24dp.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="79" />
+            <state relative-caret-position="102">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -189,7 +206,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_down_blue_24dp.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="35" />
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -198,32 +215,28 @@
         <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_up_blue.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <file leaf-file-name="post_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="-1693">
+              <caret line="46" column="50" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="50" />
               <folding>
-                <element signature="e#658#676#0" expanded="true" />
+                <element signature="e#780#803#0" expanded="true" />
+                <element signature="e#1245#1270#0" expanded="true" />
+                <element signature="e#1566#1594#0" expanded="true" />
+                <element signature="e#2978#2999#0" expanded="true" />
+                <element signature="e#4158#4187#0" expanded="true" />
+                <element signature="e#5923#5952#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-manifest">
+          <provider editor-type-id="android-designer2">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-            </state>
           </provider>
         </entry>
       </file>
@@ -273,6 +286,7 @@
       <find>like_layout</find>
       <find>like</find>
       <find>dislik</find>
+      <find>arrows</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2986,13 +3000,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-28/android/os/HandlerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-28/android/content/ContextWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7361">
@@ -3164,24 +3171,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
-          <folding>
-            <element signature="e#780#803#0" expanded="true" />
-            <element signature="e#1245#1270#0" expanded="true" />
-            <element signature="e#1566#1594#0" expanded="true" />
-            <element signature="e#2978#2999#0" expanded="true" />
-            <element signature="e#4158#4187#0" expanded="true" />
-            <element signature="e#5923#5952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/mikes_changes_view_post_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3944">
@@ -3281,16 +3270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -3332,16 +3311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="88" column="32" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/posts_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -3360,31 +3329,84 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_up_blue.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1033">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="79" />
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_down_blue_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_up_blue.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout_alternative.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+        <state relative-caret-position="551">
+          <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+          <folding>
+            <element signature="e#780#803#0" expanded="true" />
+            <element signature="e#1245#1270#0" expanded="true" />
+            <element signature="e#1566#1594#0" expanded="true" />
+            <element signature="e#2611#2632#0" expanded="true" />
+            <element signature="e#3840#3869#0" expanded="true" />
+            <element signature="e#6429#6458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1693">
+          <caret line="46" column="50" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <element signature="e#780#803#0" expanded="true" />
+            <element signature="e#1245#1270#0" expanded="true" />
+            <element signature="e#1566#1594#0" expanded="true" />
+            <element signature="e#2978#2999#0" expanded="true" />
+            <element signature="e#4158#4187#0" expanded="true" />
+            <element signature="e#5923#5952#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3393,24 +3415,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="214" column="28" selection-start-line="214" selection-start-column="28" selection-end-line="214" selection-end-column="28" />
+        <state relative-caret-position="1804">
+          <caret line="253" column="61" selection-start-line="253" selection-start-column="61" selection-end-line="253" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5011#8105#0" expanded="true" />
-            <element signature="e#7494#8056#0" expanded="true" />
-            <element signature="e#7660#7998#0" expanded="true" />
-            <element signature="e#7997#7998#0" expanded="true" />
-            <element signature="e#8055#8056#0" expanded="true" />
-            <element signature="e#8104#8105#0" expanded="true" />
-            <element signature="e#8164#11333#0" expanded="true" />
-            <element signature="e#10720#11284#0" expanded="true" />
-            <element signature="e#10888#11226#0" expanded="true" />
-            <element signature="e#11225#11226#0" expanded="true" />
-            <element signature="e#11283#11284#0" expanded="true" />
-            <element signature="e#11332#11333#0" expanded="true" />
-            <element signature="e#11396#11785#0" expanded="true" />
-            <element signature="e#11784#11785#0" expanded="true" />
+            <element signature="e#5046#14661#0" expanded="true" />
+            <element signature="e#14178#14740#0" expanded="true" />
+            <element signature="e#14344#14682#0" expanded="true" />
+            <element signature="e#14681#14682#0" expanded="true" />
+            <element signature="e#14739#14740#0" expanded="true" />
+            <element signature="e#14660#14661#0" expanded="true" />
+            <element signature="e#14720#24242#0" expanded="true" />
+            <element signature="e#23781#24345#0" expanded="true" />
+            <element signature="e#23949#24287#0" expanded="true" />
+            <element signature="e#24286#24287#0" expanded="true" />
+            <element signature="e#24344#24345#0" expanded="true" />
+            <element signature="e#24241#24242#0" expanded="true" />
+            <element signature="e#24305#24694#0" expanded="true" />
+            <element signature="e#24693#24694#0" expanded="true" />
             <element signature="e#19451#19452#0" expanded="true" />
             <element signature="e#19493#19494#0" expanded="true" />
           </folding>

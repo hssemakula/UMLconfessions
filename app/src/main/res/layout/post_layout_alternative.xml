@@ -101,13 +101,22 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
+
+
+
                 <Button
                     android:id="@+id/down_vote"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
                     android:textStyle="bold"/>
+
+
+
+
             </LinearLayout>
+
+
 
         </RelativeLayout>
     
