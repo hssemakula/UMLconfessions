@@ -82,6 +82,12 @@ public class Setup extends Fragment {
 
         rootView = inflater.inflate(R.layout.posts_fragment, container, false);
         FloatingActionButton f = (FloatingActionButton) rootView.findViewById(R.id.fab);
+
+
+
+
+
+
         f.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -123,6 +129,9 @@ public class Setup extends Fragment {
                 Confessions.class, R.layout.post_layout_alternative, ConfessionsHolder.class, DatabaseUsage.findConfession()){
 
 
+
+
+
             private int arrows;
             @Override
             protected void populateViewHolder(final ConfessionsHolder cHolder, final Confessions framework, int x){
@@ -130,6 +139,33 @@ public class Setup extends Fragment {
                 cHolder.setTime_Text(DateUtils.getRelativeTimeSpanString(framework.getTime_Of_Creation()));
                 cHolder.setComments_Count_Text(String.valueOf(framework.getCommentCount()));
                 cHolder.setLike_Count_Text(String.valueOf(framework.getLikeCount()));
+
+               /* DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                    @Override
+                    public void onDataChange(DataSnapshot d) {
+
+
+                        if (d.getValue() != null) {
+
+                            arrows = -11;
+
+
+                        } else {
+
+                            arrows = 10;
+
+                        }
+
+                    }
+
+
+                    @Override
+                    public void onCancelled (DatabaseError databaseError){
+
+                    }
+                });*/
 
 
 
@@ -219,7 +255,27 @@ public class Setup extends Fragment {
 
                                                 @Override
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+
+                                                    if(arrows==10){
+                                                        Toast.makeText(getActivity(),"set down black.", Toast.LENGTH_LONG).show();
+                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                    } else {
+                                                        if(arrows==-11){
+                                                            Toast.makeText(getActivity(),"set down blue.", Toast.LENGTH_LONG).show();
+                                                            cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                            //cHolder.clicked_dislike.bringToFront();
+                                                        }}
+
+                                                    arrows=0;
+
                                                     DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).setValue(null);
+
+
 
                                                 }
                                             });
@@ -238,21 +294,23 @@ public class Setup extends Fragment {
 
                                                 @Override
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
-                                                    DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).setValue(true);
+
                                                     if(arrows==10){
+                                                        Toast.makeText(getActivity(),"set down black.", Toast.LENGTH_LONG).show();
                                                         cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
                                                         cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                     if(arrows==-11){
+                                                        Toast.makeText(getActivity(),"set down blue.", Toast.LENGTH_LONG).show();
                                                         cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
                                                         cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
                                                         //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                         //cHolder.clicked_dislike.bringToFront();
                                                     }}
                                                     arrows=0;
-
+                                                    DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).setValue(true);
 
                                                 }
                                             });
@@ -419,6 +477,25 @@ public class Setup extends Fragment {
                                                 @Override
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
                                                     DatabaseUsage.findConfessionLiked(framework.getConfessionID()).setValue(null);
+                                                    if(arrows==0){
+                                                        Toast.makeText(getActivity(),"set up black.", Toast.LENGTH_LONG).show();
+                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                    } else {
+                                                        if(arrows==1){
+                                                            Toast.makeText(getActivity(),"set up blue.", Toast.LENGTH_LONG).show();
+                                                            cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
+                                                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                            //cHolder.clicked_dislike.bringToFront();
+                                                        }
+                                                    }
+                                                    arrows=0;
+
+
 
                                                 }
                                             });
@@ -436,21 +513,25 @@ public class Setup extends Fragment {
 
                                                 @Override
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
-                                                    DatabaseUsage.findConfessionLiked(framework.getConfessionID()).setValue(true);
+
                                                     if(arrows==0){
+                                                        Toast.makeText(getActivity(),"set up black.", Toast.LENGTH_LONG).show();
                                                         cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
                                                         cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                     if(arrows==1){
+                                                        Toast.makeText(getActivity(),"set up blue.", Toast.LENGTH_LONG).show();
                                                         cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
                                                         cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
 
                                                         //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                         //cHolder.clicked_dislike.bringToFront();
-                                                    }}
+                                                    }
+                                               }
                                                     arrows=0;
+                                                    DatabaseUsage.findConfessionLiked(framework.getConfessionID()).setValue(true);
                                                 }
                                             });
                                         }
