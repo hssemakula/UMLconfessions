@@ -2,6 +2,7 @@ package com.example.hillary.umlconfessions.GUI;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -257,16 +258,30 @@ public class Setup extends Fragment {
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
 
                                                     if(arrows==10){
-                                                        Toast.makeText(getActivity(),"set down black.", Toast.LENGTH_LONG).show();
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        Toast.makeText(getActivity(),"Removed Dislike.", Toast.LENGTH_LONG).show();
+
+                                                        final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                         if(arrows==-11){
-                                                            Toast.makeText(getActivity(),"set down blue.", Toast.LENGTH_LONG).show();
-                                                            cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
-                                                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                            Toast.makeText(getActivity(),"Error 3.", Toast.LENGTH_LONG).show();
+                                                           // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                           // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
                                                             //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                             //cHolder.clicked_dislike.bringToFront();
                                                         }}
@@ -296,18 +311,36 @@ public class Setup extends Fragment {
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
 
                                                     if(arrows==10){
-                                                        Toast.makeText(getActivity(),"set down black.", Toast.LENGTH_LONG).show();
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        Toast.makeText(getActivity(),"Error 4.", Toast.LENGTH_LONG).show();
+                                                        //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                     if(arrows==-11){
-                                                        Toast.makeText(getActivity(),"set down blue.", Toast.LENGTH_LONG).show();
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
-                                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
-                                                        //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                        final Handler mHandler = new Handler();
+
+                                                        new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {*/
+
+                                                                        Toast.makeText(getActivity(), "Disliked Post.", Toast.LENGTH_LONG).show();
+                                                                      //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                       // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                                        //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
                                                     }}
                                                     arrows=0;
                                                     DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).setValue(true);
@@ -376,7 +409,25 @@ public class Setup extends Fragment {
                                     @Override
                                     public void run() {
 
+                                       /* final Handler mHandler = new Handler();
 
+                                        new Thread(new Runnable() {
+                                            @Override
+                                            public void run () {
+                                                mHandler.post(new Runnable() {
+                                                    @Override
+                                                    public void run () {*/
+                                                     //   Toast.makeText(getActivity(),"reached here.", Toast.LENGTH_LONG).show();
+                                                       // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                        //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                    }
+                                                });
+                                            }
+                                        }).start();*/
 
                                         (theButton).setEnabled(true);
                                         (theButtonToo).setEnabled(true);
@@ -478,16 +529,44 @@ public class Setup extends Fragment {
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
                                                     DatabaseUsage.findConfessionLiked(framework.getConfessionID()).setValue(null);
                                                     if(arrows==0){
-                                                        Toast.makeText(getActivity(),"set up black.", Toast.LENGTH_LONG).show();
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        Toast.makeText(getActivity(),"Removed Like.", Toast.LENGTH_LONG).show();
+
+
+                                                        final Handler mHandler = new Handler();
+
+                                                        /*new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                                cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                                cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                                cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                                cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                                cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                                cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+
+
+
+
+
+
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                         if(arrows==1){
-                                                            Toast.makeText(getActivity(),"set up blue.", Toast.LENGTH_LONG).show();
-                                                            cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
-                                                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                                                                    Toast.makeText(getActivity(), "Error 2.", Toast.LENGTH_LONG).show();
+                                                                    //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
+                                                                    //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                            //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
+                                                            //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
 
                                                             //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                             //cHolder.clicked_dislike.bringToFront();
@@ -515,22 +594,38 @@ public class Setup extends Fragment {
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
 
                                                     if(arrows==0){
-                                                        Toast.makeText(getActivity(),"set up black.", Toast.LENGTH_LONG).show();
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        Toast.makeText(getActivity(),"Error 1.", Toast.LENGTH_LONG).show();
+                                                       // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                       // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
 
                                                         //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                     } else {
                                                     if(arrows==1){
-                                                        Toast.makeText(getActivity(),"set up blue.", Toast.LENGTH_LONG).show();
-                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
-                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+
+
+                                                        Toast.makeText(getActivity(),"Liked Post.", Toast.LENGTH_LONG).show();
+
+                                                        final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_blue);
+                                                                cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
 
                                                         //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                         //cHolder.clicked_dislike.bringToFront();
                                                     }
                                                }
-                                                    arrows=0;
+
                                                     DatabaseUsage.findConfessionLiked(framework.getConfessionID()).setValue(true);
                                                 }
                                             });
@@ -597,6 +692,8 @@ theTimer.schedule(new TimerTask(){
 
                                     @Override
                                     public void run() {
+
+
 
 
 

@@ -93,13 +93,14 @@
 
                 <TextView
                     android:id="@+id/vote_size"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:text="@string/sample_comment_size"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_alignLeft="@id/vote_layout" />
 
 
 
