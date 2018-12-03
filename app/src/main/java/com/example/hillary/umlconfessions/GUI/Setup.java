@@ -1,8 +1,6 @@
 package com.example.hillary.umlconfessions.GUI;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -29,34 +27,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
-import android.content.Intent;
+
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.format.DateUtils;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-
-import com.example.hillary.umlconfessions.R;
-import com.example.hillary.umlconfessions.frameworks.Confessions;
-import com.example.hillary.umlconfessions.tools.DatabaseUsage;
-import com.example.hillary.umlconfessions.tools.Strings_Reference;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.MutableData;
-import com.google.firebase.database.Transaction;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -127,7 +102,7 @@ public class Setup extends Fragment {
     private void makeAdapter(){
 
         confessionsAdaper = new FirebaseRecyclerAdapter<Confessions, ConfessionsHolder>(
-                Confessions.class, R.layout.post_layout_alternative, ConfessionsHolder.class, DatabaseUsage.findConfession()){
+                Confessions.class, R.layout.post_layout, ConfessionsHolder.class, DatabaseUsage.findConfession()){
 
 
 

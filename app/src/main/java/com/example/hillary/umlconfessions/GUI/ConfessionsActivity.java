@@ -1,6 +1,9 @@
 package com.example.hillary.umlconfessions.GUI;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,13 +36,14 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
     private Confessions confessionsFramework;
     private EditText myModifyTextView;
     private Comments commentsFramework;
+    private Drawable dividerDrawable;
 
     //<string name="client_id">691289616795-c3vu5nqe4dhm8jgcqb8qhf7db9m1264c.apps.googleusercontent.com</string>
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mikes_changes_view_post_fragment); //subject to change
+        setContentView(R.layout.view_post_fragment); //subject to change
 
 
 
@@ -59,6 +63,10 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
     private void startCommentArea(){
         RecyclerView recyclerView_For_Comments = (RecyclerView) findViewById(R.id.view_post_recycler); //recyclerview for comments from layout will go here
         recyclerView_For_Comments.setLayoutManager(new LinearLayoutManager(ConfessionsActivity.this));//replace with constraint layout?
+
+        dividerDrawable = getResources().getDrawable(R.drawable.item_divider);
+        RecyclerView.ItemDecoration dividerItemDecoration = new ConfessionsActivity.DividerItemDecoration(dividerDrawable);
+        recyclerView_For_Comments.addItemDecoration(dividerItemDecoration);
 
         FirebaseRecyclerAdapter<Comments, CommentsHolder> Adapter_For_Comments = new FirebaseRecyclerAdapter<Comments, CommentsHolder>(
                 Comments.class, R.layout.comment_layout, //will find the appropriate resource
@@ -196,4 +204,48 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
         outState.putSerializable(COMMENT_FINAL, commentsFramework);
         super.onSaveInstanceState(outState);
     }
+
+    public class DividerItemDecoration extends RecyclerView.ItemDecoration {
+
+        private Drawable mDivider;
+
+        public DividerItemDecoration(Drawable divider) {
+            mDivider = divider;
+        }
+
+
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+
+            if (parent.getChildAdapterPosition(view) == 0) {
+                return;
+            }
+
+            outRect.top = mDivider.getIntrinsicHeight();
+        }
+
+        @Override
+        public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
+            int dividerLeft = parent.getPaddingLeft();
+            int dividerRight = parent.getWidth() - parent.getPaddingRight();
+
+            int childCount = parent.getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                View child = parent.getChildAt(i);
+
+                RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
+
+                int dividerTop = child.getBottom() + params.bottomMargin;
+                int dividerBottom = dividerTop + mDivider.getIntrinsicHeight();
+
+                mDivider.setBounds(dividerLeft, dividerTop, dividerRight, dividerBottom);
+                mDivider.draw(canvas);
+            }
+        }
+
+
+
+
+    }
+
 }

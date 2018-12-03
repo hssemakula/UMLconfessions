@@ -1023,6 +1023,7 @@ drawable abc_vector_test
 drawable appicon_white
 drawable avd_hide_password
 drawable avd_show_password
+drawable comment_post_border
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1437,7 +1438,6 @@ layout design_text_input_password_icon
 layout log_in
 layout log_in_alternative
 layout menu_header
-layout mikes_changes_view_post_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1456,7 +1456,6 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout post_layout
-layout post_layout_alternative
 layout posts_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
