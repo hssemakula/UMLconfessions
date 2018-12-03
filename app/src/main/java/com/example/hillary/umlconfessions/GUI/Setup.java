@@ -721,6 +721,19 @@ theTimer.schedule(new TimerTask(){
                     }
                 });
 
+                cHolder.content_Text.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        Intent i;
+
+                        i = new Intent(getContext(), ConfessionsActivity.class);
+
+                        i.putExtra(Strings_Reference.ADD_CONFESSIONS, framework);
+                        startActivity(i);
+                    }
+                });
+
+
 
             }
 

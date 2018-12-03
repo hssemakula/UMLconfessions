@@ -34,6 +34,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
     private Uri myUri;
     private ImageView showConfession;
     private View rootView;
+    private AlertDialog alertDialog;
 
     @NonNull
     @Override
@@ -42,12 +43,17 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         confessionsFramework = new Confessions();
         myProgressDialog = new ProgressDialog(getContext());
 
-        rootView = getActivity().getLayoutInflater().inflate(R.layout.create_post, null); //layout for creating a "confession"
-        //showConfession = (ImageView)rootView.findViewById(R.id.); //an imageview in creating a confession....maybe not necessary
+        rootView = getActivity().getLayoutInflater().inflate(R.layout.create_post, null);
+        //showConfession = (ImageView)rootView.findViewById(R.id.);
+        rootView.findViewById(R.id.cancel).setOnClickListener(this);
         rootView.findViewById(R.id.submit).setOnClickListener(this);//the "send" imageview
-        //rootView.findViewById(R.id.).serOnClickListener(this); //for selecting an image.  likely not needed
         builder.setView(rootView);
-        return builder.create();
+        alertDialog = builder.create();
+        return alertDialog;
+
+
+
+
     }
 
     @Override
@@ -55,7 +61,11 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         switch(v.getId()){
 
             case R.id.submit: //the send button;
-                submitConfession();
+               submitConfession();
+                break;
+
+            case R.id.cancel:
+                alertDialog.cancel();
 
                 break;
             //in need of another case, will put one here
@@ -158,4 +168,9 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         }
 
     }
+
+
+
+
+
 }

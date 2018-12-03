@@ -223,9 +223,11 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
 
             case R.id.log_out: //Have to make user  = null to be actually logged out, I think
+                LogOff();
                 Intent intent = new Intent(this, LogInActivity.class);
                 startActivity(intent);
                 this.finish();
+
         }
 
         drawer.closeDrawer(GravityCompat.START);

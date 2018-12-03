@@ -68,7 +68,8 @@
                 android:gravity="center"
                 android:hint="@string/username_hint"
                 android:padding="8dp"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:visibility="gone"/>
 
             <EditText
                 android:layout_width="150dp"
@@ -78,7 +79,8 @@
                 android:gravity="center"
                 android:hint="@string/password_hint"
                 android:padding="8dp"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:visibility="gone"/>
 
             <Button
                 android:layout_width="80dp"

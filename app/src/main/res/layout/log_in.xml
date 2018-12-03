@@ -32,6 +32,7 @@
 
         <!--username textfield -->
         <EditText
+            android:visibility="gone"
             android:id="@+id/username"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
@@ -56,6 +57,7 @@
 
         <!--password textfield -->
         <EditText
+            android:visibility="gone"
             android:id="@+id/password"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
@@ -91,10 +93,11 @@
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:onClick="submitLogin"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
+           <!-- android:onClick="submitLogin"-->
 			
 			    <ProgressBar
         android:id="@+id/login_progress"
