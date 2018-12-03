@@ -1023,6 +1023,7 @@ drawable abc_vector_test
 drawable appicon_white
 drawable avd_hide_password
 drawable avd_show_password
+drawable comment_border
 drawable comment_post_border
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1073,7 +1074,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_person_black_24dp
 drawable ic_post_comment
 drawable ic_post_location
-drawable ic_send_black
+drawable ic_send_black_24dp
 drawable ic_settings_black_24dp
 drawable ic_terms
 drawable ic_thumb_down
@@ -1146,7 +1147,6 @@ id blocking
 id bottom
 id button
 id buttonPanel
-id cancel
 id cancel_action
 id center
 id center_horizontal
@@ -1521,6 +1521,7 @@ string character_counter_content_description
 string character_counter_pattern
 string client_id
 string close_navigation_drawer
+string comment
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -1600,6 +1601,7 @@ string todo
 string user_tag
 string username_hint
 string what_s_on_your_mind
+string write_your_comment_here
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

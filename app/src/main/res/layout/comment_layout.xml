@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="25dp"
+    android:layout_marginStart="5dp"
     android:layout_marginTop="10dp"
-    android:layout_marginEnd="10dp"
+    android:layout_marginEnd="5dp"
     android:layout_marginBottom="10dp"
-    android:elevation="30dp"
-    card_view:cardCornerRadius="10dp">
+    android:orientation="horizontal">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/profile_picture_desc"
+            android:src="@drawable/ic_fingerprint_black_24dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/comment_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="148dp"
-                android:drawableStart="@drawable/ic_fingerprint_black_24dp"
                 android:paddingTop="7dp"
                 android:text="@string/user_tag"
                 android:textStyle="bold" />
@@ -40,7 +51,7 @@
                 android:orientation="horizontal"
                 android:paddingStart="0dp"
                 android:paddingTop="5dp"
-                android:paddingEnd="10dp">
+                android:paddingEnd="15dp">
 
 
                 <ImageView
@@ -79,7 +90,8 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp">
 
             <!-- Give this textview bigger width, smaller text otherwise doesn't display on smaller screens-->
 
@@ -88,12 +100,12 @@
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
                 android:layout_toStartOf="@+id/vote_layout"
                 android:lineSpacingExtra="2dp"
                 android:lineSpacingMultiplier="1.15"
                 android:padding="10dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
                 android:text="@string/sample_text_long"
                 android:textSize="14sp" />
 
@@ -104,6 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 android:paddingStart="0dp"
                 android:paddingEnd="5dp">
@@ -150,16 +163,18 @@
 
             </LinearLayout>
 
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp">
+            android:layout_height="wrap_content">
 
             <Button
                 android:layout_width="20dp"
+                android:layout_marginEnd="12dp"
                 android:layout_height="20dp"
-                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/ic_flag_black_24dp"
                 android:backgroundTint="@color/colorPrimary" />
 
