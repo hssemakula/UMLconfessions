@@ -687,6 +687,7 @@ theTimer.schedule(new TimerTask(){
                 cHolder.comments_layout.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
+
                         Intent i;
 
                             i = new Intent(getContext(), ConfessionsActivity.class);

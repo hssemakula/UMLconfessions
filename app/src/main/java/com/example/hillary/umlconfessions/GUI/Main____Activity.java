@@ -331,6 +331,9 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
 
 
+
+
+
     @Override
     protected void onStop(){
                 super.onStop();
