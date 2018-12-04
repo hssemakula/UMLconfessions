@@ -79,6 +79,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/LogInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/LogInActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" afterDir="false" />
@@ -135,13 +136,13 @@
       <file leaf-file-name="PostGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="67" column="29" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="37" />
+            <state relative-caret-position="-49">
+              <caret line="121" column="39" selection-start-line="120" selection-start-column="32" selection-end-line="125" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
@@ -197,21 +198,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="31" column="15" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="47" />
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4148">
-              <caret line="334" selection-start-line="334" selection-end-line="334" />
+            <state relative-caret-position="136">
+              <caret line="281" selection-start-line="281" selection-end-line="281" />
               <folding>
                 <element signature="e#7806#8114#0" expanded="true" />
                 <element signature="e#8113#8114#0" expanded="true" />
-                <element signature="e#11615#11616#0" expanded="true" />
-                <element signature="e#11679#11680#0" expanded="true" />
+                <element signature="e#12468#12469#0" expanded="true" />
+                <element signature="e#12532#12533#0" expanded="true" />
                 <element signature="e#12666#12667#0" expanded="true" />
                 <element signature="e#12708#12709#0" expanded="true" />
               </folding>
@@ -269,17 +270,17 @@
       <find>isDraw</find>
       <find>gravity</find>
       <find>case</find>
-      <find>onCli</find>
       <find>Gravi</find>
       <find>view</find>
-      <find>onBa</find>
-      <find>onSav</find>
       <find>testDe</find>
       <find>m.setValue(</find>
       <find>setValue(NULL)</find>
       <find>z - 1</find>
       <find>removeValue()</find>
       <find>-5</find>
+      <find>onSav</find>
+      <find>onCli</find>
+      <find>onBa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2601,18 +2602,17 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/log_in_alternative.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/log_in.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/create_post.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="138" />
-    <option name="y" value="8" />
-    <option name="width" value="2492" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1502" />
+    <option name="width" value="1246" />
     <option name="height" value="1756" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -2958,7 +2958,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="4" width="1246" height="878" extended-state="0" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
@@ -2967,16 +2967,16 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5058923" side_tool="true" visible="true" weight="0.33911884" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50566894" side_tool="true" visible="true" weight="0.33597884" />
       <window_info anchor="right" id="Preview" order="3" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77609426" weight="0.22162884" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49410775" visible="true" weight="0.33911884" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49433106" visible="true" weight="0.33597884" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22727273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20408164" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49357522" weight="0.21031746" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4945055" weight="0.3271028" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -3326,17 +3326,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="47" />
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -3379,6 +3372,25 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="509" column="80" selection-start-line="509" selection-start-column="80" selection-end-line="509" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4584#19211#0" expanded="true" />
+            <element signature="e#19210#19211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="121" column="39" selection-start-line="120" selection-start-column="32" selection-end-line="125" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -3399,27 +3411,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4148">
-          <caret line="334" selection-start-line="334" selection-end-line="334" />
+        <state relative-caret-position="136">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
           <folding>
             <element signature="e#7806#8114#0" expanded="true" />
             <element signature="e#8113#8114#0" expanded="true" />
-            <element signature="e#11615#11616#0" expanded="true" />
-            <element signature="e#11679#11680#0" expanded="true" />
+            <element signature="e#12468#12469#0" expanded="true" />
+            <element signature="e#12532#12533#0" expanded="true" />
             <element signature="e#12666#12667#0" expanded="true" />
             <element signature="e#12708#12709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="509" column="80" selection-start-line="509" selection-start-column="80" selection-end-line="509" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4584#19211#0" expanded="true" />
-            <element signature="e#19210#19211#0" expanded="true" />
           </folding>
         </state>
       </provider>

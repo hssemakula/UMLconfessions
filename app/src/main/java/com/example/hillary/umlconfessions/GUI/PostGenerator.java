@@ -103,6 +103,8 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
 
 
                         if(userInfo.getActive() == true){
+
+
                             Toast.makeText(getActivity(),"4", Toast.LENGTH_LONG).show();
                             final String confessionsID = DatabaseUsage.findUser_ID();
                             TextView confessDialog = (TextView) rootView.findViewById(R.id.confession_text);//layout attribute where the user types in his confession
@@ -111,18 +113,31 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
                             String text = confessDialog.getText().toString();
 
 
-                            confessionsFramework.setUserInfo(userInfo);
-                            confessionsFramework.setCommentCount(0);
-                            confessionsFramework.setLikeCount(0);
-                            confessionsFramework.setTime_Of_Creation(System.currentTimeMillis());
-                            confessionsFramework.setConfessionID(confessionsID);
-                            confessionsFramework.setConfessionText(text);
+                            if(text.length()<1) {
+                                myProgressDialog.dismiss();
+
+                            }else {
+
+                                if(text.length()>180) {
+                                    Toast.makeText(getActivity(),"Character limit reached.  Please enter a message of 180 characters or less", Toast.LENGTH_LONG).show();
+
+                                    myProgressDialog.dismiss();
+
+                                }else {
+                                    confessionsFramework.setUserInfo(userInfo);
+                                    confessionsFramework.setCommentCount(0);
+                                    confessionsFramework.setLikeCount(0);
+                                    confessionsFramework.setTime_Of_Creation(System.currentTimeMillis());
+                                    confessionsFramework.setConfessionID(confessionsID);
+                                    confessionsFramework.setConfessionText(text);
 
 
-                            if(myUri!=null){
-                                appendConfessionsFeed(confessionsID);
-                            } else {
-                                appendConfessionsFeed(confessionsID);
+                                    if (myUri != null) {
+                                        appendConfessionsFeed(confessionsID);
+                                    } else {
+                                        appendConfessionsFeed(confessionsID);
+                                    }
+                                }
                             }
 
                         } else {

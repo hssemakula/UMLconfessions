@@ -260,10 +260,10 @@ public class ConfessionsActivitySetup extends Fragment  {
         progressDialog.setMessage("Submitting comment");
         progressDialog.setCancelable(true);
         progressDialog.setIndeterminate(true);
-        progressDialog.show();
+
         commentsFramework = new Comments();
         final String user_ID = DatabaseUsage.findUser_ID();
-        String text_of_comment = myModifyTextView.getText().toString();
+        final String text_of_comment = myModifyTextView.getText().toString();
 
         commentsFramework.setID_from_comment(user_ID);
         commentsFramework.setComment_text(text_of_comment);
@@ -275,25 +275,38 @@ public class ConfessionsActivitySetup extends Fragment  {
                     UserInfo userInfo = dataSnapshot.getValue(UserInfo.class);
 
                     if(userInfo.getActive() == true){
-                        commentsFramework.setUserInfo(userInfo);
-                        DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(user_ID).setValue(commentsFramework);
+                        if(text_of_comment.length()<1) {
+                            progressDialog.dismiss();
 
-                        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_COMMENTS_NUMBER).runTransaction(new Transaction.Handler() {
-                            @Override
-                            public Transaction.Result doTransaction(MutableData mutableData){
-                                long a = (long)mutableData.getValue();
-                                mutableData.setValue(a+1);
-                                return Transaction.success(mutableData);
+                        }else {
+
+                            if (text_of_comment.length() > 180) {
+                                Toast.makeText(getActivity(), "Character limit reached.  Please enter a message of 180 characters or less", Toast.LENGTH_LONG).show();
+
+                               progressDialog.dismiss();
+
+                            } else {
+                                progressDialog.show();
+                                commentsFramework.setUserInfo(userInfo);
+                                DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(user_ID).setValue(commentsFramework);
+
+                                DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_COMMENTS_NUMBER).runTransaction(new Transaction.Handler() {
+                                    @Override
+                                    public Transaction.Result doTransaction(MutableData mutableData) {
+                                        long a = (long) mutableData.getValue();
+                                        mutableData.setValue(a + 1);
+                                        return Transaction.success(mutableData);
+                                    }
+
+                                    @Override
+                                    public void onComplete(DatabaseError databaseError, boolean myBoolean, DataSnapshot dataSnapshot) {
+                                        progressDialog.dismiss();
+                                        DatabaseUsage.update(Strings_Reference.KEY_FOR_COMMENTS, user_ID);
+
+                                    }
+                                });
                             }
-
-                            @Override
-                            public void onComplete(DatabaseError databaseError, boolean myBoolean, DataSnapshot dataSnapshot){
-                                progressDialog.dismiss();
-                                DatabaseUsage.update(Strings_Reference.KEY_FOR_COMMENTS, user_ID);
-
-                            }
-                        });
-
+                        }
 
                     } else {
                         progressDialog.dismiss();
