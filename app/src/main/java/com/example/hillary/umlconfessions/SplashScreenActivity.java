@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.hillary.umlconfessions.GUI.Main____Activity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
@@ -27,7 +29,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            Intent intent = new Intent(SplashScreenActivity.this, LogInActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, Main____Activity.class);
             startActivity(intent);
             SplashScreenActivity.this.finish();
         }

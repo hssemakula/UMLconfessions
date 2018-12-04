@@ -34,15 +34,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.hillary.umlconfessions.GUI.Main____Activity"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.hillary.umlconfessions.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.hillary.umlconfessions.GUI.Main____Activity" />
         <activity android:name="com.example.hillary.umlconfessions.LogInActivity" />
         <activity android:name="com.example.hillary.umlconfessions.GUI.ConfessionsActivity" />
         <activity
