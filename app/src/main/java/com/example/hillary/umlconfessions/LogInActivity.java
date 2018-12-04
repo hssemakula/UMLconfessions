@@ -42,7 +42,7 @@ public class LogInActivity extends OnlineFunctionality implements View.OnClickLi
 
     @Override
     public void onClick(View view){
-        Toast.makeText(getApplicationContext(),"1.", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(),"1.", Toast.LENGTH_LONG).show();
         switch(view.getId()){
             case R.id.login_button:
                 showProgressDialog();
@@ -51,23 +51,23 @@ public class LogInActivity extends OnlineFunctionality implements View.OnClickLi
     }
 
     private void login(){
-        Toast.makeText(getApplicationContext(),"2.", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(),"2.", Toast.LENGTH_LONG).show();
         Intent i = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
         startActivityForResult(i, SIGN_IN_CODE);
     }
 
     @Override
     protected void onActivityResult(int ask, int recieve, Intent i){
-        Toast.makeText(getApplicationContext(),"3.", Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),"3.", Toast.LENGTH_LONG).show();
         super.onActivityResult(ask,recieve,i);
         if(recieve == Activity.RESULT_OK){
-            Toast.makeText(getApplicationContext(),"4.", Toast.LENGTH_LONG).show();
+         //   Toast.makeText(getApplicationContext(),"4.", Toast.LENGTH_LONG).show();
             if(ask == SIGN_IN_CODE){
-                Toast.makeText(getApplicationContext(),"5.", Toast.LENGTH_LONG).show();
+            //    Toast.makeText(getApplicationContext(),"5.", Toast.LENGTH_LONG).show();
                 GoogleSignInResult googleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(i);
                 if(googleSignInResult.isSuccess()){
 
-                    Toast.makeText(getApplicationContext(),"6.", Toast.LENGTH_LONG).show();
+                //    Toast.makeText(getApplicationContext(),"6.", Toast.LENGTH_LONG).show();
                     GoogleSignInAccount googleSignInAccount = googleSignInResult.getSignInAccount();
                     Authenticate(googleSignInAccount);
 
@@ -80,7 +80,7 @@ public class LogInActivity extends OnlineFunctionality implements View.OnClickLi
                 dismiss();
             }
         } else {
-            Toast.makeText(getApplicationContext(),""+recieve, Toast.LENGTH_LONG).show();
+          //  Toast.makeText(getApplicationContext(),""+recieve, Toast.LENGTH_LONG).show();
             dismiss();
         }
     }
@@ -92,7 +92,7 @@ public class LogInActivity extends OnlineFunctionality implements View.OnClickLi
             @Override
             public void onComplete(@NonNull Task<AuthResult> task){
                 if(task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(),"It worked.", Toast.LENGTH_LONG).show();
+                //    Toast.makeText(getApplicationContext(),"It worked.", Toast.LENGTH_LONG).show();
                     UserInfo userInfo = new UserInfo();
                     userInfo.setActive(true);
                     String url = null;
@@ -109,7 +109,7 @@ public class LogInActivity extends OnlineFunctionality implements View.OnClickLi
                         }
                     });
                 } else {
-                    Toast.makeText(getApplicationContext(),"It didn't work.", Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(getApplicationContext(),"It didn't work.", Toast.LENGTH_LONG).show();
                     dismiss();
                 }
             }

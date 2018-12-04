@@ -1091,7 +1091,6 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable post_btn
 drawable profile_bg
-drawable profile_bg_old
 drawable splash_screen_icon
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1450,7 +1449,7 @@ layout select_dialog_singlechoice_material
 layout settings_fragment
 layout splash_screen
 layout support_simple_spinner_dropdown_item
-layout terms_and_conditions_fragment
+layout terms_of_service_fragment
 layout test
 layout view_post_fragment
 layout view_post_fragment_test

@@ -78,12 +78,12 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
         myProgressDialog.setIndeterminate(true);
         myProgressDialog.show();
 
-        Toast.makeText(getActivity(),DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",","), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getActivity(),DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",","), Toast.LENGTH_LONG).show();
 
         //Toast.makeText(getActivity(),userInfo.getActive().toString(), Toast.LENGTH_LONG).show();
 
         if(DatabaseUsage.findUserInfo(DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",","))== null){
-            Toast.makeText(getActivity(),"null",Toast.LENGTH_LONG).show();
+           // Toast.makeText(getActivity(),"null",Toast.LENGTH_LONG).show();
         }
 
         DatabaseUsage.findUserInfo(DatabaseUsage.findCurrentUserInfo().getEmail().replace(".",",")).addListenerForSingleValueEvent(
@@ -96,7 +96,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
 
                         if(userInfo==null){
 
-                            Toast.makeText(getActivity(), "theres the problem", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getActivity(), "theres the problem", Toast.LENGTH_LONG).show();
                         }
 
 
@@ -105,7 +105,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
                         if(userInfo.getActive() == true){
 
 
-                            Toast.makeText(getActivity(),"4", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getActivity(),"4", Toast.LENGTH_LONG).show();
                             final String confessionsID = DatabaseUsage.findUser_ID();
                             TextView confessDialog = (TextView) rootView.findViewById(R.id.confession_text);//layout attribute where the user types in his confession
 
@@ -155,7 +155,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
 
                     @Override
                     public void onCancelled(DatabaseError databaseError){
-                        Toast.makeText(getActivity(),databaseError.toString(), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getActivity(),databaseError.toString(), Toast.LENGTH_LONG).show();
                         myProgressDialog.dismiss();
                     }
 

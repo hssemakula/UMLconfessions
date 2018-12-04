@@ -1,6 +1,8 @@
 package com.example.hillary.umlconfessions.GUI;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -22,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -139,6 +142,7 @@ public class ConfessionsActivitySetup extends Fragment  {
     }
 
     private void startCommentArea(){
+
         RecyclerView recyclerView_For_Comments = (RecyclerView) rootView.findViewById(R.id.view_post_recycler); //recyclerview for comments from layout will go here
         recyclerView_For_Comments.setLayoutManager(new LinearLayoutManager(rootView.getContext()));//ConfessionsActivitySetup.this));//replace with constraint layout?
 
@@ -157,6 +161,26 @@ public class ConfessionsActivitySetup extends Fragment  {
                 commentsHolder.setThe_comment(framework.getComment_text());
                 commentsHolder.setThe_time(DateUtils.getRelativeTimeSpanString(framework.getTime_of_creation()));
                 commentsHolder.setLike_Count_Text(String.valueOf(framework.getLikeCount()));
+
+                final TextView rootSize = (TextView)rootView.findViewById(R.id.vote_size);
+                DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(DataSnapshot g) {
+                        try {
+                            rootSize.setText(g.getValue().toString());
+                        } catch(NullPointerException e){
+                            getActivity().onBackPressed();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError h) {
+
+                    }
+                });
+
+
 
                 //also will do the time here
                 commentsHolder.dislike_button.setOnClickListener(new View.OnClickListener(){
@@ -692,9 +716,24 @@ public class ConfessionsActivitySetup extends Fragment  {
 
         confession_Text_View.setText(confessionsFramework.getConfessionText());
 
-        confession_Like_Count_View.setText(String.valueOf(confessionsFramework.getLikeCount()));
         confession_Comment_Count_View.setText(String.valueOf(confessionsFramework.getCommentCount()));
+        final TextView rootSize = (TextView)rootView.findViewById(R.id.vote_size);
+        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).addListenerForSingleValueEvent(new ValueEventListener() {
 
+            @Override
+            public void onDataChange(DataSnapshot g) {
+                try {
+                    rootSize.setText(g.getValue().toString());
+                } catch(NullPointerException e){
+                    getActivity().onBackPressed();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError h) {
+
+            }
+        });
 
 
 
@@ -712,7 +751,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                }
         }); //send button
 
-       final TextView rootSize = (TextView)rootView.findViewById(R.id.vote_size);
+
 
 
 
@@ -736,9 +775,16 @@ public class ConfessionsActivitySetup extends Fragment  {
                         allowClick = false;
 
                         DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
-
+                            long old;
+                            long neww;
                             @Override
                             public void onDataChange(DataSnapshot d) {
+
+
+                               // try {
+
+
+
 
 
 
@@ -747,8 +793,11 @@ public class ConfessionsActivitySetup extends Fragment  {
                                         @Override
                                         public Transaction.Result doTransaction(MutableData m) {
                                             long z = (long) m.getValue();
+                                            old = z;
+
                                             m.setValue(z - 1);
-                                            rootSize.setText(String.valueOf(z-1));
+                                            neww = (long) m.getValue();
+                                           // rootSize.setText(String.valueOf(z));
                                             if ((long) m.getValue() < (-4)) {
                                                 DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
                                             }
@@ -780,12 +829,12 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                                     @Override
                                                                     public void run () {*/
 
-                                                    Toast.makeText(getActivity(), "Disliked Comment.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getActivity(), "Disliked post.", Toast.LENGTH_LONG).show();
                                                     //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
                                                     // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
                                                     //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                     //cHolder.clicked_dislike.bringToFront();
-
+                                                                            startConfession();
 /*
                                                                     }
                                                                 });
@@ -808,8 +857,11 @@ public class ConfessionsActivitySetup extends Fragment  {
                                             @Override
                                             public Transaction.Result doTransaction(MutableData m) {
                                                 long z = (long) m.getValue();
+                                                old = z;
+
                                                 m.setValue(z + 1);
-                                                rootSize.setText(String.valueOf(z+1));
+                                                neww = (long) m.getValue();
+                                               // rootSize.setText(String.valueOf(z));
                                                 arrows = 10;
                                                 //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                 return Transaction.success(m);
@@ -821,7 +873,6 @@ public class ConfessionsActivitySetup extends Fragment  {
 
                                                 if(arrows==10){
                                                     Toast.makeText(getActivity(),"Removed Dislike.", Toast.LENGTH_LONG).show();
-
                                                     final Handler mHandler = new Handler();
 
                                                        /* new Thread(new Runnable() {
@@ -851,6 +902,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 arrows=0;
 
                                                 DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue(null);
+                                                startConfession();
 
 
 
@@ -864,8 +916,11 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 @Override
                                                 public Transaction.Result doTransaction(MutableData m) {
                                                     long z = (long) m.getValue();
+                                                    old = z;
+
                                                     m.setValue(z - 2);
-                                                    rootSize.setText(String.valueOf(z-2));
+                                                    neww = (long) m.getValue();
+                                                   // rootSize.setText(String.valueOf(z));
 
                                                     if ((long)m.getValue()<(-4)){
                                                         DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
@@ -877,8 +932,8 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 @Override
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
                                                     DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("-1");
-                                                    Toast.makeText(getActivity(),"Disliked Comment.", Toast.LENGTH_LONG).show();
-
+                                                    Toast.makeText(getActivity(),"Disliked post.", Toast.LENGTH_LONG).show();
+                                                    startConfession();
                                                 }
                                             });
 
@@ -887,6 +942,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                         }
                                     }
                                 }
+
                             }
 
                             @Override
@@ -1030,7 +1086,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                             long z = (long) m.getValue();
                                             m.setValue(z + 1);
 
-                                            rootSize.setText(String.valueOf(z+1));
+                                         //   rootSize.setText(String.valueOf(z));
                                             if ((long) m.getValue() < (-4)) {
                                                 DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
                                             }
@@ -1062,7 +1118,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                                     @Override
                                                                     public void run () {*/
 
-                                                    Toast.makeText(getActivity(), "Liked Comment.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getActivity(), "Liked post.", Toast.LENGTH_LONG).show();
 
                                                     //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
                                                     // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
@@ -1080,7 +1136,7 @@ public class ConfessionsActivitySetup extends Fragment  {
 
                                             arrows = 0;
                                             DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("1");
-
+                                            startConfession();
                                         }
 
                                     });
@@ -1093,7 +1149,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                             public Transaction.Result doTransaction(MutableData m) {
                                                 long z = (long) m.getValue();
                                                 m.setValue(z + 2);
-                                                rootSize.setText(String.valueOf(z+2));
+                                              //  rootSize.setText(String.valueOf(z));
                                                 arrows = 888;
                                                 //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
                                                 return Transaction.success(m);
@@ -1104,7 +1160,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                             public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
 
                                                 if(arrows==888){
-                                                    Toast.makeText(getActivity(),"Liked Comment.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getActivity(),"Liked post.", Toast.LENGTH_LONG).show();
 
                                                     final Handler mHandler = new Handler();
 
@@ -1135,7 +1191,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 arrows=0;
 
                                                 DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("1");
-
+                                                startConfession();
 
 
                                             }
@@ -1149,7 +1205,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 public Transaction.Result doTransaction(MutableData m) {
                                                     long z = (long) m.getValue();
                                                     m.setValue(z - 1);
-                                                    rootSize.setText(String.valueOf(z-1));
+                                                 //   rootSize.setText(String.valueOf(z));
 
                                                     if ((long)m.getValue()<(-4)){
                                                         DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
@@ -1162,6 +1218,7 @@ public class ConfessionsActivitySetup extends Fragment  {
                                                 public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
                                                     DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue(null);
                                                     Toast.makeText(getActivity(),"Removed Like.", Toast.LENGTH_LONG).show();
+                                                    startConfession();
 
                                                 }
                                             });
@@ -1294,7 +1351,10 @@ public class ConfessionsActivitySetup extends Fragment  {
 
 
 
-
+    public static void compactKeyboard(Context context, View view) {
+        InputMethodManager a = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        a.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
 
 
@@ -1347,6 +1407,8 @@ public class ConfessionsActivitySetup extends Fragment  {
                                     @Override
                                     public void onComplete(DatabaseError databaseError, boolean myBoolean, DataSnapshot dataSnapshot) {
                                         progressDialog.dismiss();
+                                        compactKeyboard(getContext(), rootView);
+                                        myModifyTextView.setText("");
                                         DatabaseUsage.update(Strings_Reference.KEY_FOR_COMMENTS, user_ID);
 
                                     }
@@ -1359,7 +1421,6 @@ public class ConfessionsActivitySetup extends Fragment  {
 
                     } else {
                         progressDialog.dismiss();
-
                         Toast.makeText(rootView.getContext(), "Your account has been suspended." +
                         "\nYou cannot use this feature.", Toast.LENGTH_LONG).show();
 
@@ -1430,6 +1491,8 @@ public class ConfessionsActivitySetup extends Fragment  {
 
         @Override
         public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
+
+
             int dividerLeft = parent.getPaddingLeft();
             int dividerRight = parent.getWidth() - parent.getPaddingRight();
 

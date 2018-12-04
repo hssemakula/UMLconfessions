@@ -1090,10 +1090,9 @@ int drawable notification_tile_bg 0x7f07009e
 int drawable notify_panel_notification_icon_bg 0x7f07009f
 int drawable post_btn 0x7f0700a0
 int drawable profile_bg 0x7f0700a1
-int drawable profile_bg_old 0x7f0700a2
-int drawable splash_screen_icon 0x7f0700a3
-int drawable tooltip_frame_dark 0x7f0700a4
-int drawable tooltip_frame_light 0x7f0700a5
+int drawable splash_screen_icon 0x7f0700a2
+int drawable tooltip_frame_dark 0x7f0700a3
+int drawable tooltip_frame_light 0x7f0700a4
 int id ALT 0x7f080000
 int id CTRL 0x7f080001
 int id FUNCTION 0x7f080002
@@ -1449,7 +1448,7 @@ int layout select_dialog_singlechoice_material 0x7f0b0044
 int layout settings_fragment 0x7f0b0045
 int layout splash_screen 0x7f0b0046
 int layout support_simple_spinner_dropdown_item 0x7f0b0047
-int layout terms_and_conditions_fragment 0x7f0b0048
+int layout terms_of_service_fragment 0x7f0b0048
 int layout test 0x7f0b0049
 int layout view_post_fragment 0x7f0b004a
 int layout view_post_fragment_test 0x7f0b004b

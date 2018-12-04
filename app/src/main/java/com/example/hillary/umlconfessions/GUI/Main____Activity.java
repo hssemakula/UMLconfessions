@@ -72,7 +72,6 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
 
 
 
-
     protected void onCreate(Bundle savedInstanceState) {
 
 
@@ -222,7 +221,7 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
                 break;
 
 
-            case R.id.log_out: //Have to make user  = null to be actually logged out, I think
+            case R.id.log_out:
                 LogOff();
                 Intent intent = new Intent(this, LogInActivity.class);
                 startActivity(intent);
