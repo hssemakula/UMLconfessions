@@ -97,4 +97,17 @@
     <string name="terms_and_conditions_full_string">1. you have to agree to the terms and conditions before using the app 2.Targeted Harassment will make you subject to disciplinary action 3.Threats of violence will result in a permanent ban 4. posting personal information will make you subject to disciplinary action 5. spamming will make you subject to disciplinary action 6. This app is compliant with all US laws including libel laws 7. This app is only for use by Umass Lowell students I came up with that without looking at other Terms for reference so I may have missed some important ones You can put that in the terms section, i\'m probably going to revise it later</string>
     <string name="write_your_comment_here">Write your comment here.</string>
     <string name="comment">comment</string>
+    <string name="terms_of_service">TERMS OF SERVICE</string>
+    <string name="terms_1">Agreement</string>
+    <string name="terms_2">You have to agree to the terms and conditions before using the app.</string>
+    <string name="terms_3">Threats and Harrasment</string>
+    <string name="terms_4">Targeted Harassment will make you subject to disciplinary action.</string>
+    <string name="terms_5">Threats of violence will result in a permanent ban.</string>
+    <string name="terms_6">Posting personal information will make you subject to disciplinary action.</string>
+    <string name="terms_7">Spamming</string>
+    <string name="terms_8">Spamming will make you subject to disciplinary action.</string>
+    <string name="terms_9">Legal</string>
+    <string name="terms_10">This app is compliant with all US laws including libel laws.</string>
+    <string name="terms_11">This app is only for use by Umass Lowell students</string>
+    <string name="terms_copyright">Copyright © 2018</string>
 </resources>
