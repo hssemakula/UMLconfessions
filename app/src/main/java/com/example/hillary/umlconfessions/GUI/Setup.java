@@ -36,6 +36,8 @@ import android.graphics.drawable.Drawable;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static java.sql.Types.NULL;
+
 
 public class Setup extends Fragment {
     private View rootView;
@@ -176,6 +178,10 @@ public class Setup extends Fragment {
                                                 public Transaction.Result doTransaction(MutableData m) {
                                                     long z = (long) m.getValue();
                                                     m.setValue(z - 1);
+
+                                                    if ((long)m.getValue()<(-4)){
+                                                        DatabaseUsage.findConfession().child(framework.getConfessionID()).removeValue();
+                                                    }
                                                     return Transaction.success(m);
 
                                                 }
@@ -276,6 +282,9 @@ public class Setup extends Fragment {
                                                 public Transaction.Result doTransaction(MutableData m) {
                                                     long z = (long) m.getValue();
                                                     m.setValue(z - 1);
+                                                    if ((long)m.getValue()<(-4)){
+                                                        DatabaseUsage.findConfession().child(framework.getConfessionID()).removeValue();
+                                                    }
                                                     arrows=-11;
                                                     //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
                                                     //cHolder.clicked_dislike.bringToFront();
@@ -494,6 +503,9 @@ public class Setup extends Fragment {
                                                 public Transaction.Result doTransaction(MutableData m) {
                                                     long z = (long) m.getValue();
                                                     m.setValue(z - 1);
+                                                    if ((long)m.getValue()<(-4)){
+                                                        DatabaseUsage.findConfession().child(framework.getConfessionID()).removeValue();
+                                                    }
                                                     arrows=0;
                                                  // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
                                                     return Transaction.success(m);
@@ -784,6 +796,7 @@ theTimer.schedule(new TimerTask(){
                             public Transaction.Result doTransaction(MutableData m) {
                                 long z = (long) m.getValue();
                                 m.setValue(z - 1);
+
                                 return Transaction.success(m);
 
                             }
@@ -964,6 +977,10 @@ theTimer.schedule(new TimerTask(){
 
         public void setComments_Count_Text(String s){
             comments_Count_Text.setText(s);
+
+        }
+
+        public void testDeletion(){
 
         }
 

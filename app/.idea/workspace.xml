@@ -55,8 +55,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_common_10_0_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_down_blue_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_keyboard_arrow_up_blue.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -86,8 +84,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/Strings_Reference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/viewPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/viewPosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/appicon_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_log_out.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_menu_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_terms.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/login_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/login_btn_color_change.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/log_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/log_in_alternative.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/log_in_alternative.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/log_in_alternative.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/menu_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/menu_header.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/posts_activity.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/menu/drawer_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/drawer_menu.xml" afterDir="false" />
@@ -136,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="56" column="28" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="28" />
+            <state relative-caret-position="206">
+              <caret line="509" column="80" selection-start-line="509" selection-start-column="80" selection-end-line="509" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4584#19211#0" expanded="true" />
@@ -200,7 +205,7 @@
       <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4811">
+            <state relative-caret-position="4148">
               <caret line="334" selection-start-line="334" selection-end-line="334" />
               <folding>
                 <element signature="e#7806#8114#0" expanded="true" />
@@ -223,10 +228,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_post_fragment.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view_post_fragment.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4311" />
+            <state relative-caret-position="-2373" />
           </provider>
           <provider editor-type-id="android-designer2">
             <state />
@@ -245,12 +250,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>like_layout</find>
-      <find>like</find>
-      <find>dislik</find>
-      <find>arrows</find>
-      <find>set down blue</find>
-      <find>set down black</find>
       <find>set up</find>
       <find>setBackgro</find>
       <find>comments_l</find>
@@ -275,6 +274,12 @@
       <find>view</find>
       <find>onBa</find>
       <find>onSav</find>
+      <find>testDe</find>
+      <find>m.setValue(</find>
+      <find>setValue(NULL)</find>
+      <find>z - 1</find>
+      <find>removeValue()</find>
+      <find>-5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2597,10 +2602,10 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/log_in.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/create_post.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
       </list>
     </option>
   </component>
@@ -3359,16 +3364,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/ViewPostFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4584#19211#0" expanded="true" />
-            <element signature="e#19210#19211#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2373" />
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
@@ -3391,7 +3399,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4811">
+        <state relative-caret-position="4148">
           <caret line="334" selection-start-line="334" selection-end-line="334" />
           <folding>
             <element signature="e#7806#8114#0" expanded="true" />
@@ -3404,19 +3412,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/ViewPostFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        <state relative-caret-position="206">
+          <caret line="509" column="80" selection-start-line="509" selection-start-column="80" selection-end-line="509" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4584#19211#0" expanded="true" />
+            <element signature="e#19210#19211#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4311" />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
   </component>
