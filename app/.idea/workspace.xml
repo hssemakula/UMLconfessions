@@ -80,6 +80,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/LogInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/LogInActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" afterDir="false" />
@@ -122,50 +123,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PostGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="133" column="80" selection-start-line="133" selection-start-column="80" selection-end-line="133" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConfessionsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
+            <state relative-caret-position="1666">
               <caret line="162" column="37" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseUsage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="45" column="113" selection-start-line="45" selection-start-column="113" selection-end-line="45" selection-end-column="113" />
+            <state relative-caret-position="-222">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/comment_layout.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="157" column="48" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="48" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_post.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/create_post.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="176" column="67" selection-start-line="176" selection-start-column="58" selection-end-line="176" selection-end-column="109" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Setup.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
+      <file leaf-file-name="view_post_fragment.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="566" column="87" selection-start-line="566" selection-start-column="87" selection-end-line="566" selection-end-column="87" />
+            <state relative-caret-position="517">
+              <caret line="143" column="66" selection-start-line="143" selection-start-column="66" selection-end-line="143" selection-end-column="66" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="756" column="85" lean-forward="true" selection-start-line="756" selection-start-column="85" selection-end-line="756" selection-end-column="85" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4620#19419#0" expanded="true" />
-                <element signature="e#17484#19370#0" expanded="true" />
-                <element signature="e#19369#19370#0" expanded="true" />
-                <element signature="e#19418#19419#0" expanded="true" />
-                <element signature="e#19478#32124#0" expanded="true" />
-                <element signature="e#32123#32124#0" expanded="true" />
-                <element signature="e#32187#32577#0" expanded="true" />
-                <element signature="e#32576#32577#0" expanded="true" />
-                <element signature="e#32637#33024#0" expanded="true" />
-                <element signature="e#33023#33024#0" expanded="true" />
+                <element signature="e#6522#21470#0" expanded="true" />
+                <element signature="e#19611#21421#0" expanded="true" />
+                <element signature="e#21420#21421#0" expanded="true" />
+                <element signature="e#21469#21470#0" expanded="true" />
+                <element signature="e#21536#34253#0" expanded="true" />
+                <element signature="e#34252#34253#0" expanded="true" />
+                <element signature="e#48470#50152#0" expanded="true" />
+                <element signature="e#50151#50152#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,54 +214,30 @@
       <file leaf-file-name="OnlineFunctionality.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="293">
               <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Strings_Reference.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/Strings_Reference.java">
+      <file leaf-file-name="DatabaseUsage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+            <state relative-caret-position="255">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogInActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/LogInActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="79" />
+      <file leaf-file-name="post_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplashScreenActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/SplashScreenActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="33" column="15" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewPosts.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/viewPosts.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-            </state>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -237,36 +253,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fragment</find>
-      <find>setup</find>
-      <find>isDraw</find>
-      <find>gravity</find>
-      <find>case</find>
-      <find>Gravi</find>
-      <find>view</find>
-      <find>testDe</find>
-      <find>m.setValue(</find>
-      <find>setValue(NULL)</find>
-      <find>z - 1</find>
-      <find>removeValue()</find>
-      <find>-5</find>
-      <find>onBa</find>
-      <find>onSav</find>
-      <find>onCli</find>
-      <find>3</find>
-      <find>comments_coun</find>
-      <find>+ 1</find>
-      <find>isLiked</find>
-      <find>is_Liked</find>
-      <find>like()</find>
-      <find>findConfessionDis</find>
-      <find>like</find>
-      <find>findConfessionLike</find>
+      <find>arrows</find>
+      <find>cHolder</find>
+      <find>dislike_button</find>
+      <find>HOlder</find>
+      <find>like_Count_Text</find>
+      <find>findConfession</find>
+      <find>findConfe</find>
+      <find>findComm</find>
+      <find>commentsFrame</find>
+      <find>confessionsFra</find>
+      <find>savedInsta</find>
+      <find>commentsFra</find>
+      <find>framework</find>
+      <find>commentsFramework</find>
+      <find>liked post</find>
+      <find>startConf</find>
+      <find>findConf</find>
+      <find>setValue</find>
+      <find>num</find>
+      <find>number</find>
+      <find>set</find>
+      <find>setLi</find>
+      <find>Like</find>
+      <find>findConfessionLiked</find>
       <find>==</find>
-      <find>dislike</find>
-      <find>-1</find>
-      <find>)).setValue(</find>
-      <find>toStr</find>
+      <find>onComplete</find>
+      <find>setText</find>
+      <find>root</find>
+      <find>m.setValue</find>
+      <find>rootSize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2548,7 +2564,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/res/layout/posts_activity.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/CommentHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/CommentsHolder.java" />
@@ -2586,13 +2601,14 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/log_in.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/create_post.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/Strings_Reference.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
       </list>
     </option>
   </component>
@@ -2687,6 +2703,16 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="umlconfessions" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UMLconfessions-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2771,7 +2797,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Mike/AndroidStudioProjects/UMLconfessions-master/app/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Mike/AndroidStudioProjects/UMLconfessions-master/app/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -2953,17 +2979,17 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5170068" side_tool="true" visible="true" weight="0.33597884" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.23129252" side_tool="true" visible="true" weight="0.22089948" />
       <window_info anchor="right" id="Preview" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76946336" weight="0.22089948" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76870745" visible="true" weight="0.22089948" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="7" sideWeight="0.4829932" visible="true" weight="0.33597884" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.4829932" weight="0.33597884" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24565382" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.48752835" weight="0.21031746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494331" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.48677248" weight="0.21031746" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4945055" weight="0.3271028" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -3197,16 +3223,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/posts_fragment.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -3217,41 +3233,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/ViewPostFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/comment_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="157" column="48" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="143" column="66" selection-start-line="143" selection-start-column="66" selection-end-line="143" selection-end-column="66" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values-v21/strings.xml">
@@ -3281,23 +3267,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/create_post.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -3305,49 +3274,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="165" column="37" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="37" />
-          <folding>
-            <element signature="e#7806#8114#0" expanded="true" />
-            <element signature="e#8113#8114#0" expanded="true" />
-            <element signature="e#12573#12574#0" expanded="true" />
-            <element signature="e#12637#12638#0" expanded="true" />
-            <element signature="e#12666#12667#0" expanded="true" />
-            <element signature="e#12708#12709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="333" selection-start-line="333" selection-end-line="333" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/SignIn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="45" column="113" selection-start-line="45" selection-start-column="113" selection-end-line="45" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -3379,43 +3309,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="133" column="80" selection-start-line="133" selection-start-column="80" selection-end-line="133" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Confessions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="3" selection-end-line="66" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/frameworks/Comments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="748">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/post_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/comment_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="157" column="48" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="48" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/create_post.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/view_post_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="143" column="66" selection-start-line="143" selection-start-column="66" selection-end-line="143" selection-end-column="66" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="176" column="67" selection-start-line="176" selection-start-column="58" selection-end-line="176" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/OnlineFunctionality.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/tools/DatabaseUsage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
+        <state relative-caret-position="1666">
           <caret line="162" column="37" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="133" column="80" selection-start-line="133" selection-start-column="80" selection-end-line="133" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="566" column="87" selection-start-line="566" selection-start-column="87" selection-end-line="566" selection-end-column="87" />
+        <state relative-caret-position="271">
+          <caret line="756" column="85" lean-forward="true" selection-start-line="756" selection-start-column="85" selection-end-line="756" selection-end-column="85" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4620#19419#0" expanded="true" />
-            <element signature="e#17484#19370#0" expanded="true" />
-            <element signature="e#19369#19370#0" expanded="true" />
-            <element signature="e#19418#19419#0" expanded="true" />
-            <element signature="e#19478#32124#0" expanded="true" />
-            <element signature="e#32123#32124#0" expanded="true" />
-            <element signature="e#32187#32577#0" expanded="true" />
-            <element signature="e#32576#32577#0" expanded="true" />
-            <element signature="e#32637#33024#0" expanded="true" />
-            <element signature="e#33023#33024#0" expanded="true" />
+            <element signature="e#6522#21470#0" expanded="true" />
+            <element signature="e#19611#21421#0" expanded="true" />
+            <element signature="e#21420#21421#0" expanded="true" />
+            <element signature="e#21469#21470#0" expanded="true" />
+            <element signature="e#21536#34253#0" expanded="true" />
+            <element signature="e#34252#34253#0" expanded="true" />
+            <element signature="e#48470#50152#0" expanded="true" />
+            <element signature="e#50151#50152#0" expanded="true" />
           </folding>
         </state>
       </provider>

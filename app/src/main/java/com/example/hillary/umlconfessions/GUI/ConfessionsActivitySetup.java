@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -21,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +46,9 @@ import com.google.firebase.database.Transaction;
 import com.google.firebase.database.ValueEventListener;
 import android.support.v4.app.Fragment;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class ConfessionsActivitySetup extends Fragment  {
 
@@ -65,6 +70,8 @@ public class ConfessionsActivitySetup extends Fragment  {
     private NavigationView navigationView;
     private LinearLayoutManager layoutManager;
     private View rootView;
+    private boolean allowClick=true;
+    private boolean allowClickToo=true;
 
 
 
@@ -144,13 +151,524 @@ public class ConfessionsActivitySetup extends Fragment  {
         CommentsHolder.class,
             DatabaseUsage.findComment(confessionsFramework.getConfessionID())
         ) {
-
+            private int arrows;
             @Override
-            protected void populateViewHolder(CommentsHolder commentsHolder, Comments framework, int where){
+            protected void populateViewHolder(final CommentsHolder commentsHolder, final Comments framework, int where){
                 commentsHolder.setThe_comment(framework.getComment_text());
                 commentsHolder.setThe_time(DateUtils.getRelativeTimeSpanString(framework.getTime_of_creation()));
-                //also will do the time here
+                commentsHolder.setLike_Count_Text(String.valueOf(framework.getLikeCount()));
 
+                //also will do the time here
+                commentsHolder.dislike_button.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view){
+                        final Button theButton = commentsHolder.like_button;
+                        final Button theButtonToo = commentsHolder.dislike_button;
+                        theButton.setEnabled(false);
+                        theButtonToo.setEnabled(false);
+
+                        if(allowClickToo==true) {
+                            allowClickToo = false;
+
+                            // downvote(framework.getConfessionID());
+
+
+                            if (allowClick == true) {
+                                allowClick = false;
+
+                                DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                                    @Override
+                                    public void onDataChange(DataSnapshot d) {
+
+
+
+                                        if (d.getValue()== null) {
+                                            DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                @Override
+                                                public Transaction.Result doTransaction(MutableData m) {
+                                                    long z = (long) m.getValue();
+                                                    m.setValue(z - 1);
+
+                                                    if ((long) m.getValue() < (-4)) {
+                                                        DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).removeValue();
+                                                    }
+                                                    arrows = -11;
+                                                    //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                    //cHolder.clicked_dislike.bringToFront();
+                                                    return Transaction.success(m);
+                                                }
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+
+                                                    if (arrows == 10) {
+                                                        Toast.makeText(getActivity(), "Error 4.", Toast.LENGTH_LONG).show();
+                                                        //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                    } else {
+                                                        if (arrows == -11) {
+
+/*
+                                                        final Handler mHandler = new Handler();
+
+                                                        new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {*/
+
+                                                            Toast.makeText(getActivity(), "Disliked Comment.", Toast.LENGTH_LONG).show();
+                                                            //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                            // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                            //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                        }
+                                                    }
+                                                    arrows = 0;
+                                                    DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue("-1");
+
+                                                }
+
+                                            });
+
+
+                                        } else {
+                                            if (d.getValue().toString().equals("-1")) {
+                                                DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                    @Override
+                                                    public Transaction.Result doTransaction(MutableData m) {
+                                                        long z = (long) m.getValue();
+                                                        m.setValue(z + 1);
+                                                        arrows = 10;
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                        return Transaction.success(m);
+
+                                                    }
+
+                                                    @Override
+                                                    public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+
+                                                        if(arrows==10){
+                                                            Toast.makeText(getActivity(),"Removed Dislike.", Toast.LENGTH_LONG).show();
+
+                                                            final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                            //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                        } else {
+                                                            if(arrows==-11){
+                                                                Toast.makeText(getActivity(),"Error 3.", Toast.LENGTH_LONG).show();
+                                                                // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                                //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                                //cHolder.clicked_dislike.bringToFront();
+                                                            }}
+
+                                                        arrows=0;
+
+                                                        DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue(null);
+
+
+
+                                                    }
+                                                });
+
+                                            } else {
+                                                if (d.getValue().toString().equals("1")){
+
+                                                    DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                        @Override
+                                                        public Transaction.Result doTransaction(MutableData m) {
+                                                            long z = (long) m.getValue();
+                                                            m.setValue(z - 2);
+
+                                                            if ((long)m.getValue()<(-4)){
+                                                                DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).removeValue();
+                                                            }
+                                                            return Transaction.success(m);
+
+                                                        }
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                                            DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue("-1");
+                                                            Toast.makeText(getActivity(),"Disliked Comment.", Toast.LENGTH_LONG).show();
+                                                        }
+                                                    });
+
+
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+
+                                });
+
+
+                                DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                                    @Override
+                                    public void onDataChange(DataSnapshot d) {
+
+
+
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+
+                                });
+                                allowClick = true;
+
+
+                            }
+
+
+                            allowClickToo=true;
+                        }
+
+
+                           /* DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                                @Override
+                                public void onDataChange(DataSnapshot d) {
+
+
+                                    if (d.getValue() != null) {
+
+                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+
+
+                                    } /*else {
+
+                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                        }*/
+
+                        //}
+                               /* @Override
+                                public void onCancelled (DatabaseError databaseError){
+
+                             /*   }
+                            });
+
+                            allowClickToo=true;
+                        }*/
+
+
+
+                        Timer theTimer = new Timer();
+                        theTimer.schedule(new TimerTask(){
+
+
+
+                            @Override
+                            public void run() {
+                                getActivity().runOnUiThread(new Runnable() {
+
+
+                                    @Override
+                                    public void run() {
+
+                                       /* final Handler mHandler = new Handler();
+
+                                        new Thread(new Runnable() {
+                                            @Override
+                                            public void run () {
+                                                mHandler.post(new Runnable() {
+                                                    @Override
+                                                    public void run () {*/
+                                        //   Toast.makeText(getActivity(),"reached here.", Toast.LENGTH_LONG).show();
+                                        // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                        //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                        //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                    }
+                                                });
+                                            }
+                                        }).start();*/
+
+                                        (theButton).setEnabled(true);
+                                        (theButtonToo).setEnabled(true);
+                                    }
+                                });
+                            }
+                        },430);
+
+
+
+                    }
+                });
+
+                commentsHolder.like_button.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view) {
+                        final Button theButton = commentsHolder.like_button;
+                        final Button theButtonToo = commentsHolder.dislike_button;
+                        theButton.setEnabled(false);
+                        theButtonToo.setEnabled(false);
+
+                        if(allowClickToo==true) {
+                            allowClickToo = false;
+
+                            // downvote(framework.getConfessionID());
+
+
+                            if (allowClick == true) {
+                                allowClick = false;
+
+                                DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                                    @Override
+                                    public void onDataChange(DataSnapshot d) {
+
+
+
+                                        if (d.getValue()==null) {
+
+                                            DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                @Override
+                                                public Transaction.Result doTransaction(MutableData m) {
+                                                    long z = (long) m.getValue();
+                                                    m.setValue(z + 1);
+                                                    if ((long) m.getValue() < (-4)) {
+                                                        DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).removeValue();
+                                                    }
+                                                    arrows = 999;
+                                                    //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                    //cHolder.clicked_dislike.bringToFront();
+                                                    return Transaction.success(m);
+                                                }
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+
+                                                    if (arrows == 10) {
+                                                        Toast.makeText(getActivity(), "Error 4.", Toast.LENGTH_LONG).show();
+                                                        //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                        //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                    } else {
+                                                        if (arrows == 999) {
+
+/*
+                                                        final Handler mHandler = new Handler();
+
+                                                        new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {*/
+
+                                                            Toast.makeText(getActivity(), "Liked Comment.", Toast.LENGTH_LONG).show();
+                                                            //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                            // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                            //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                        }
+                                                    }
+                                                    arrows = 0;
+                                                    DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue("1");
+
+                                                }
+
+                                            });
+
+
+                                        } else {
+                                            if (d.getValue().toString().equals("-1")) {
+                                                DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                    @Override
+                                                    public Transaction.Result doTransaction(MutableData m) {
+                                                        long z = (long) m.getValue();
+                                                        m.setValue(z + 2);
+                                                        arrows = 888;
+                                                        //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                        return Transaction.success(m);
+
+                                                    }
+
+                                                    @Override
+                                                    public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+
+                                                        if(arrows==888){
+                                                            Toast.makeText(getActivity(),"Liked Comment.", Toast.LENGTH_LONG).show();
+
+                                                            final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                            //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                        } else {
+                                                            if(arrows==-11){
+                                                                Toast.makeText(getActivity(),"Error 3.", Toast.LENGTH_LONG).show();
+                                                                // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                                // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                                //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                                //cHolder.clicked_dislike.bringToFront();
+                                                            }}
+
+                                                        arrows=0;
+
+                                                        DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue("1");
+
+
+
+                                                    }
+                                                });
+
+                                            } else {
+                                                if (d.getValue().toString().equals("1")){
+
+                                                    DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                        @Override
+                                                        public Transaction.Result doTransaction(MutableData m) {
+                                                            long z = (long) m.getValue();
+                                                            m.setValue(z - 1);
+
+
+                                                            if ((long)m.getValue()<(-4)){
+                                                                DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(framework.getID_from_comment()).removeValue();
+                                                            }
+                                                            return Transaction.success(m);
+
+                                                        }
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                                            DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).setValue(null);
+                                                            Toast.makeText(getActivity(),"Removed Like.", Toast.LENGTH_LONG).show();
+                                                        }
+                                                    });
+
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+
+                                });
+
+
+                                DatabaseUsage.findConfessionLiked(framework.getID_from_comment()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                                    @Override
+                                    public void onDataChange(DataSnapshot d) {
+
+
+
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+
+                                });
+                                allowClick = true;
+
+
+                            }
+
+
+                            allowClickToo=true;
+                        }
+
+
+
+                        Timer theTimer = new Timer();
+                        theTimer.schedule(new TimerTask(){
+
+
+
+
+
+                            @Override
+                            public void run() {
+                                getActivity().runOnUiThread(new Runnable() {
+
+
+                                    @Override
+                                    public void run() {
+
+
+
+
+
+                                        (theButton).setEnabled(true);
+                                        (theButtonToo).setEnabled(true);
+                                    }
+                                });
+                            }
+                        },430);
+
+
+
+                    }
+                });
                // Glide.with(ConfessionsActivity.this).load(framework.getUserInfo().getP()).into(commentsHolder.imageView);
             }
         };
@@ -193,6 +711,533 @@ public class ConfessionsActivitySetup extends Fragment  {
                    }
                }
         }); //send button
+
+       final TextView rootSize = (TextView)rootView.findViewById(R.id.vote_size);
+
+
+
+        rootView.findViewById(R.id.down_vote).setOnClickListener(new View.OnClickListener(){
+            int arrows;
+            @Override
+            public void onClick(View view){
+                final Button theButton = rootView.findViewById(R.id.up_vote);
+                final Button theButtonToo = rootView.findViewById(R.id.down_vote);
+                theButton.setEnabled(false);
+                theButtonToo.setEnabled(false);
+
+
+                if(allowClickToo==true) {
+                    allowClickToo = false;
+
+                    // downvote(framework.getConfessionID());
+
+
+                    if (allowClick == true) {
+                        allowClick = false;
+
+                        DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                            @Override
+                            public void onDataChange(DataSnapshot d) {
+
+
+
+                                if (d.getValue()== null) {
+                                    DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                        @Override
+                                        public Transaction.Result doTransaction(MutableData m) {
+                                            long z = (long) m.getValue();
+                                            m.setValue(z - 1);
+                                            rootSize.setText(String.valueOf(z-1));
+                                            if ((long) m.getValue() < (-4)) {
+                                                DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
+                                            }
+                                            arrows = -11;
+                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                            //cHolder.clicked_dislike.bringToFront();
+                                            return Transaction.success(m);
+                                        }
+
+                                        @Override
+                                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+
+                                            if (arrows == 10) {
+                                                Toast.makeText(getActivity(), "Error 4.", Toast.LENGTH_LONG).show();
+                                                //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                            } else {
+                                                if (arrows == -11) {
+
+/*
+                                                        final Handler mHandler = new Handler();
+
+                                                        new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {*/
+
+                                                    Toast.makeText(getActivity(), "Disliked Comment.", Toast.LENGTH_LONG).show();
+                                                    //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                    // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                    //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                    //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                }
+                                            }
+                                            arrows = 0;
+                                            DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("-1");
+
+                                        }
+
+                                    });
+
+
+                                } else {
+                                    if (d.getValue().toString().equals("-1")) {
+                                        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                            @Override
+                                            public Transaction.Result doTransaction(MutableData m) {
+                                                long z = (long) m.getValue();
+                                                m.setValue(z + 1);
+                                                rootSize.setText(String.valueOf(z+1));
+                                                arrows = 10;
+                                                //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                return Transaction.success(m);
+
+                                            }
+
+                                            @Override
+                                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+
+                                                if(arrows==10){
+                                                    Toast.makeText(getActivity(),"Removed Dislike.", Toast.LENGTH_LONG).show();
+
+                                                    final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                    //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                } else {
+                                                    if(arrows==-11){
+                                                        Toast.makeText(getActivity(),"Error 3.", Toast.LENGTH_LONG).show();
+                                                        // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                        //cHolder.clicked_dislike.bringToFront();
+                                                    }}
+
+                                                arrows=0;
+
+                                                DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue(null);
+
+
+
+                                            }
+                                        });
+
+                                    } else {
+                                        if (d.getValue().toString().equals("1")){
+
+                                            DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                @Override
+                                                public Transaction.Result doTransaction(MutableData m) {
+                                                    long z = (long) m.getValue();
+                                                    m.setValue(z - 2);
+                                                    rootSize.setText(String.valueOf(z-2));
+
+                                                    if ((long)m.getValue()<(-4)){
+                                                        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
+                                                    }
+                                                    return Transaction.success(m);
+
+                                                }
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                                    DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("-1");
+                                                    Toast.makeText(getActivity(),"Disliked Comment.", Toast.LENGTH_LONG).show();
+
+                                                }
+                                            });
+
+
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+
+                        });
+
+
+                        DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                            @Override
+                            public void onDataChange(DataSnapshot d) {
+
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+
+                        });
+                        allowClick = true;
+
+
+                    }
+
+
+                    allowClickToo=true;
+                }
+
+
+                           /* DatabaseUsage.findConfessionDisliked(framework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+                                @Override
+                                public void onDataChange(DataSnapshot d) {
+
+
+                                    if (d.getValue() != null) {
+
+                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+
+
+                                    } /*else {
+
+                            cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+
+                        }*/
+
+                //}
+                               /* @Override
+                                public void onCancelled (DatabaseError databaseError){
+
+                             /*   }
+                            });
+
+                            allowClickToo=true;
+                        }*/
+
+
+
+                Timer theTimer = new Timer();
+                theTimer.schedule(new TimerTask(){
+
+
+
+                    @Override
+                    public void run() {
+                        getActivity().runOnUiThread(new Runnable() {
+
+
+                            @Override
+                            public void run() {
+
+                                       /* final Handler mHandler = new Handler();
+
+                                        new Thread(new Runnable() {
+                                            @Override
+                                            public void run () {
+                                                mHandler.post(new Runnable() {
+                                                    @Override
+                                                    public void run () {*/
+                                //   Toast.makeText(getActivity(),"reached here.", Toast.LENGTH_LONG).show();
+                                // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                    }
+                                                });
+                                            }
+                                        }).start();*/
+
+                                (theButton).setEnabled(true);
+                                (theButtonToo).setEnabled(true);
+                            }
+                        });
+                    }
+                },430);
+
+
+
+            }
+        });
+
+        rootView.findViewById(R.id.up_vote).setOnClickListener(new View.OnClickListener(){
+           int arrows;
+            @Override
+            public void onClick(View view) {
+                final Button theButton = rootView.findViewById(R.id.up_vote);
+                final Button theButtonToo = rootView.findViewById(R.id.down_vote);
+                theButton.setEnabled(false);
+                theButtonToo.setEnabled(false);
+
+                if(allowClickToo==true) {
+                    allowClickToo = false;
+
+                    // downvote(framework.getConfessionID());
+
+
+                    if (allowClick == true) {
+                        allowClick = false;
+
+                        DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                            @Override
+                            public void onDataChange(DataSnapshot d) {
+
+
+
+                                if (d.getValue()==null) {
+
+                                    DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                        @Override
+                                        public Transaction.Result doTransaction(MutableData m) {
+                                            long z = (long) m.getValue();
+                                            m.setValue(z + 1);
+
+                                            rootSize.setText(String.valueOf(z+1));
+                                            if ((long) m.getValue() < (-4)) {
+                                                DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
+                                            }
+                                            arrows = 999;
+                                            //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                            //cHolder.clicked_dislike.bringToFront();
+                                            return Transaction.success(m);
+                                        }
+
+                                        @Override
+                                        public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot dataS) {
+
+                                            if (arrows == 10) {
+                                                Toast.makeText(getActivity(), "Error 4.", Toast.LENGTH_LONG).show();
+                                                //cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                //cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                            } else {
+                                                if (arrows == 999) {
+
+/*
+                                                        final Handler mHandler = new Handler();
+
+                                                        new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {*/
+
+                                                    Toast.makeText(getActivity(), "Liked Comment.", Toast.LENGTH_LONG).show();
+
+                                                    //  cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                    // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                    //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                    //cHolder.clicked_dislike.bringToFront();
+
+/*
+                                                              rootSize.setText(d.getValue().toString());      }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                }
+                                            }
+
+                                            arrows = 0;
+                                            DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("1");
+
+                                        }
+
+                                    });
+
+
+                                } else {
+                                    if (d.getValue().toString().equals("-1")) {
+                                        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                            @Override
+                                            public Transaction.Result doTransaction(MutableData m) {
+                                                long z = (long) m.getValue();
+                                                m.setValue(z + 2);
+                                                rootSize.setText(String.valueOf(z+2));
+                                                arrows = 888;
+                                                //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                return Transaction.success(m);
+
+                                            }
+
+                                            @Override
+                                            public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+
+                                                if(arrows==888){
+                                                    Toast.makeText(getActivity(),"Liked Comment.", Toast.LENGTH_LONG).show();
+
+                                                    final Handler mHandler = new Handler();
+
+                                                       /* new Thread(new Runnable() {
+                                                            @Override
+                                                            public void run () {
+                                                                mHandler.post(new Runnable() {
+                                                                    @Override
+                                                                    public void run () {
+                                                                        cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                                                                        cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        }).start();*/
+
+                                                    //cHolder.clicked_dislike.setVisibility(View.INVISIBLE);
+                                                } else {
+                                                    if(arrows==-11){
+                                                        Toast.makeText(getActivity(),"Error 3.", Toast.LENGTH_LONG).show();
+                                                        // cHolder.like_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_up_black);
+                                                        // cHolder.dislike_button.setBackgroundResource(R.drawable.ic_keyboard_arrow_down_blue_24dp);
+                                                        //cHolder.clicked_dislike.setVisibility(View.VISIBLE);
+                                                        //cHolder.clicked_dislike.bringToFront();
+                                                    }}
+
+                                                arrows=0;
+
+                                                DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue("1");
+
+
+
+                                            }
+                                        });
+
+                                    } else {
+                                        if (d.getValue().toString().equals("1")){
+
+                                            DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).child(Strings_Reference.KEY_FOR_LIKE_NUMBER).runTransaction(new Transaction.Handler() {
+                                                @Override
+                                                public Transaction.Result doTransaction(MutableData m) {
+                                                    long z = (long) m.getValue();
+                                                    m.setValue(z - 1);
+                                                    rootSize.setText(String.valueOf(z-1));
+
+                                                    if ((long)m.getValue()<(-4)){
+                                                        DatabaseUsage.findConfession().child(confessionsFramework.getConfessionID()).removeValue();
+                                                    }
+                                                    return Transaction.success(m);
+
+                                                }
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, boolean myBool, DataSnapshot d) {
+                                                    DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).setValue(null);
+                                                    Toast.makeText(getActivity(),"Removed Like.", Toast.LENGTH_LONG).show();
+
+                                                }
+                                            });
+
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+
+                        });
+
+
+                        DatabaseUsage.findConfessionLiked(confessionsFramework.getConfessionID()).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                            @Override
+                            public void onDataChange(DataSnapshot d) {
+
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+
+                        });
+                        allowClick = true;
+
+
+                    }
+
+
+                    allowClickToo=true;
+                }
+
+
+
+                Timer theTimer = new Timer();
+                theTimer.schedule(new TimerTask(){
+
+
+
+
+
+                    @Override
+                    public void run() {
+                        getActivity().runOnUiThread(new Runnable() {
+
+
+                            @Override
+                            public void run() {
+
+
+
+
+
+                                (theButton).setEnabled(true);
+                                (theButtonToo).setEnabled(true);
+                            }
+                        });
+                    }
+                },430);
+
+
+
+            }
+        });
+
+
 
     }
 
@@ -333,16 +1378,23 @@ public class ConfessionsActivitySetup extends Fragment  {
         ImageView imageView;
         TextView the_time;
         TextView the_comment;
+        Button dislike_button;
+        Button like_button;
+        TextView like_Count_Text;
 
         public CommentsHolder(View itemView){
             super(itemView);
+            like_button = (Button) itemView.findViewById(R.id.up_vote);
+            dislike_button = (Button) itemView.findViewById(R.id.down_vote);
             the_time = (TextView) itemView.findViewById(R.id.comment_time_passed);  //the time
             the_comment = (TextView) itemView.findViewById(R.id.comment_text_here);  //the comment
+            like_Count_Text = (TextView) itemView.findViewById(R.id.vote_size);
 
         }
 
         public void setThe_time(CharSequence t){the_time.setText(t);}
         public void setThe_comment(String c){the_comment.setText(c);}
+        public void setLike_Count_Text(String s){ like_Count_Text.setText(s); }
 
 
     }

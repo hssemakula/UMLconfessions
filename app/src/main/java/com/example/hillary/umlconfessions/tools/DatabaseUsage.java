@@ -22,6 +22,12 @@ public class DatabaseUsage {
         return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_CONFESSIONS);
     }
 
+
+    public static DatabaseReference findComment(String commentId){
+        return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_COMMENTS).child(commentId);
+    }
+
+
     public static DatabaseReference findLike() {
         return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_IS_LIKED);
     }
@@ -29,6 +35,9 @@ public class DatabaseUsage {
     public static DatabaseReference findConfessionLiked(String confessionID) {
     return findLike().child(findCurrentUserInfo().getEmail().replace(".",",")).child(confessionID);
     }
+
+
+
 
     public static DatabaseReference findDislike() {
         return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_IS_DISLIKED);
@@ -62,9 +71,7 @@ public class DatabaseUsage {
 
     }
 
-    public static DatabaseReference findComment(String commentId){
-     return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_COMMENTS).child(commentId);
-    }
+
 
     public static DatabaseReference findMyRecord(){
         return FirebaseDatabase.getInstance().getReference(Strings_Reference.USERINFO_RECORD).child(findCurrentUserInfo().getEmail().replace(".",","));
