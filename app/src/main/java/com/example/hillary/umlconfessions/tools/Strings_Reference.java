@@ -14,5 +14,6 @@ public class Strings_Reference {
     public static final String MY_CONFESSIONS = "my_confessions";
     public static final String USERINFO_RECORD = "record";
     public static final String KEY_FOR_COMMENTS_NUMBER = "commentCount";
+    public static final String KEY_FOR_UPVOTE_DOWNVOTE = "upvote_downvote";
     //public static final String
 }

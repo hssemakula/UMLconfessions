@@ -34,7 +34,8 @@
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/ic_add_a_photo_black_24dp"
                 android:textColor="#fff"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone"/>
 
         </RelativeLayout>
 

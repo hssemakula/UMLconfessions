@@ -38,6 +38,14 @@ public class DatabaseUsage {
         return findDislike().child(findCurrentUserInfo().getEmail().replace(".",",")).child(confessionID);
     }
 
+    public static DatabaseReference findUpvoteDownvote(){
+        return FirebaseDatabase.getInstance().getReference(Strings_Reference.KEY_FOR_UPVOTE_DOWNVOTE);
+    }
+
+    public static DatabaseReference findConfessionUpvoteDownvote(String confessionID){
+        return findUpvoteDownvote().child(findCurrentUserInfo().getEmail().replace(".",",")).child(confessionID);
+    }
+
     public static FirebaseUser findCurrentUserInfo(){
         return FirebaseAuth.getInstance().getCurrentUser();
     }
