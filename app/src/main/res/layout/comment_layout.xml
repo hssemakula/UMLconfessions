@@ -107,6 +107,7 @@
                 android:paddingStart="0dp"
                 android:paddingEnd="10dp"
                 android:text="@string/sample_text_long"
+                android:textColor="#1C2833"
                 android:textSize="14sp" />
 
             <!--  center up and down vote vertically  WITH  android:layout_alignParentRight-->

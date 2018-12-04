@@ -65,7 +65,6 @@
             android:focusable="true"
             android:lineSpacingExtra="2dp"
             android:lineSpacingMultiplier="1.15"
-            android:maxLines="6"
             android:padding="10dp"
             android:text="@string/sample_text"
             android:textColor="#000"
