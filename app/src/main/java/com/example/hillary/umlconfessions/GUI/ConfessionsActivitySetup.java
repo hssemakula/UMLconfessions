@@ -263,7 +263,7 @@ public class ConfessionsActivitySetup extends Fragment  {
 
         commentsFramework = new Comments();
         final String user_ID = DatabaseUsage.findUser_ID();
-        final String text_of_comment = myModifyTextView.getText().toString();
+        final String text_of_comment = myModifyTextView.getText().toString().trim();
 
         commentsFramework.setID_from_comment(user_ID);
         commentsFramework.setComment_text(text_of_comment);
@@ -286,7 +286,8 @@ public class ConfessionsActivitySetup extends Fragment  {
                                progressDialog.dismiss();
 
                             } else {
-                                progressDialog.show();
+                                if (text_of_comment.trim().length() > 0){
+                                    progressDialog.show();
                                 commentsFramework.setUserInfo(userInfo);
                                 DatabaseUsage.findComment(confessionsFramework.getConfessionID()).child(user_ID).setValue(commentsFramework);
 
@@ -305,6 +306,9 @@ public class ConfessionsActivitySetup extends Fragment  {
 
                                     }
                                 });
+                            } else{
+                                    progressDialog.dismiss();
+                                }
                             }
                         }
 

@@ -110,7 +110,7 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
                             TextView confessDialog = (TextView) rootView.findViewById(R.id.confession_text);//layout attribute where the user types in his confession
 
 
-                            String text = confessDialog.getText().toString();
+                            String text = confessDialog.getText().toString().trim();
 
 
                             if(text.length()<1) {
@@ -124,18 +124,23 @@ public class PostGenerator extends DialogFragment implements View.OnClickListene
                                     myProgressDialog.dismiss();
 
                                 }else {
-                                    confessionsFramework.setUserInfo(userInfo);
-                                    confessionsFramework.setCommentCount(0);
-                                    confessionsFramework.setLikeCount(0);
-                                    confessionsFramework.setTime_Of_Creation(System.currentTimeMillis());
-                                    confessionsFramework.setConfessionID(confessionsID);
-                                    confessionsFramework.setConfessionText(text);
+
+                                    if (text.trim().length() > 0) {
+                                        confessionsFramework.setUserInfo(userInfo);
+                                        confessionsFramework.setCommentCount(0);
+                                        confessionsFramework.setLikeCount(0);
+                                        confessionsFramework.setTime_Of_Creation(System.currentTimeMillis());
+                                        confessionsFramework.setConfessionID(confessionsID);
+                                        confessionsFramework.setConfessionText(text);
 
 
-                                    if (myUri != null) {
-                                        appendConfessionsFeed(confessionsID);
+                                        if (myUri != null) {
+                                            appendConfessionsFeed(confessionsID);
+                                        } else {
+                                            appendConfessionsFeed(confessionsID);
+                                        }
                                     } else {
-                                        appendConfessionsFeed(confessionsID);
+                                        myProgressDialog.dismiss();
                                     }
                                 }
                             }

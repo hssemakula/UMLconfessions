@@ -133,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostGenerator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-49">
-              <caret line="121" column="39" selection-start-line="120" selection-start-column="32" selection-end-line="125" selection-end-column="39" />
+            <state relative-caret-position="-151">
+              <caret line="112" column="83" selection-start-line="112" selection-start-column="83" selection-end-line="112" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -203,16 +203,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConfessionsActivitySetup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="281" selection-start-line="281" selection-end-line="281" />
+            <state relative-caret-position="200">
+              <caret line="265" column="83" selection-start-line="265" selection-start-column="83" selection-end-line="265" selection-end-column="83" />
               <folding>
                 <element signature="e#7806#8114#0" expanded="true" />
                 <element signature="e#8113#8114#0" expanded="true" />
-                <element signature="e#12468#12469#0" expanded="true" />
-                <element signature="e#12532#12533#0" expanded="true" />
+                <element signature="e#12573#12574#0" expanded="true" />
+                <element signature="e#12637#12638#0" expanded="true" />
                 <element signature="e#12666#12667#0" expanded="true" />
                 <element signature="e#12708#12709#0" expanded="true" />
               </folding>
@@ -278,9 +278,9 @@
       <find>z - 1</find>
       <find>removeValue()</find>
       <find>-5</find>
-      <find>onSav</find>
-      <find>onCli</find>
       <find>onBa</find>
+      <find>onCli</find>
+      <find>onSav</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2605,8 +2605,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Main____Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/Setup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java" />
       </list>
     </option>
   </component>
@@ -3384,13 +3384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="121" column="39" selection-start-line="120" selection-start-column="32" selection-end-line="125" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -3411,16 +3404,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/ConfessionsActivitySetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="281" selection-start-line="281" selection-end-line="281" />
+        <state relative-caret-position="200">
+          <caret line="265" column="83" selection-start-line="265" selection-start-column="83" selection-end-line="265" selection-end-column="83" />
           <folding>
             <element signature="e#7806#8114#0" expanded="true" />
             <element signature="e#8113#8114#0" expanded="true" />
-            <element signature="e#12468#12469#0" expanded="true" />
-            <element signature="e#12532#12533#0" expanded="true" />
+            <element signature="e#12573#12574#0" expanded="true" />
+            <element signature="e#12637#12638#0" expanded="true" />
             <element signature="e#12666#12667#0" expanded="true" />
             <element signature="e#12708#12709#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/hillary/umlconfessions/GUI/PostGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="112" column="83" selection-start-line="112" selection-start-column="83" selection-end-line="112" selection-end-column="83" />
         </state>
       </provider>
     </entry>
