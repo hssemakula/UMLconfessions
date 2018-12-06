@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Hillary Ssemakula
+layout file inflated when the settings fragment is called. It contains two buttons
+that each lead to another xml file. Basically this is the settings layout.
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- Button to take user to terms of service. -->
 
     <Button
         android:id="@+id/terms"
@@ -18,6 +24,7 @@
         android:textAlignment="textStart"
         android:textSize="18sp" />
 
+    <!-- Button to delete account -->
     <Button
         android:id="@+id/delete_account"
         android:layout_width="match_parent"

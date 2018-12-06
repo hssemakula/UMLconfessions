@@ -1,154 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--
+HIllary SSemakula. This fragment displays the terms of service.-
+Basically all of the terms are coded in as textvies wrapped around a scroll view so that the screen can scroll on smaller screens
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
     android:orientation="vertical">
-<LinearLayout
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="vertical">
-    
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:src="@drawable/logo_terms"
-        android:contentDescription="@string/logo_header"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="@string/terms_of_service"
-        android:textSize="20sp"
-        android:textColor="#7B7D7D"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:background="#F2F3F4"/>
-    
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingBottom="20dp"
-    android:background="#fff">
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_1"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="10dp"
-        android:textColor="@color/colorPrimary"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="5dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:contentDescription="@string/logo_header"
+            android:src="@drawable/logo_terms" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_3"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="40dp"
-        android:textColor="@color/colorPrimary"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="5dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_4"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#F2F3F4"
+            android:gravity="center"
+            android:text="@string/terms_of_service"
+            android:textColor="#7B7D7D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="5dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_5"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_6"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingTop="40dp"
-        android:paddingEnd="20dp"
-        android:text="@string/terms_7"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="5dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_8"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_9"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="40dp"
-        android:textColor="@color/colorPrimary"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="5dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_10"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="15sp"
-        android:textColor="#000"
-        android:text="@string/terms_11"/>
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_2"
+                android:textColor="#000"
+                android:textSize="15sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp"
-        android:textColor="#7B7D7D"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:background="#F2F3F4"
-        android:text="@string/terms_copyright"/>
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_3"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_4"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_5"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_6"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_7"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_8"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_9"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_10"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/terms_11"
+                android:textColor="#000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2F3F4"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/terms_copyright"
+            android:textColor="#7B7D7D"
+            android:textStyle="bold" />
+    </LinearLayout>
 </ScrollView>

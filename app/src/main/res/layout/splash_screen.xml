@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Hillary SSemakula
+This is the layi=out or the splash screen: it is shown every time a user tries
+to login or starts the app. It conatins one textview which is the logo pf the app.
+-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

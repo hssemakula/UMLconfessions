@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Hillary Ssemakula.
+This layout is used when the user clicks on a post and is taken to a different screen with the specific post and comments.
+This layout basically joins the alredy made post_layout and the comment_layout and the recycler view uses that to make multiple copies of the comments
+as needed.
+
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -228,6 +235,8 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <!-- Edittext for typing comments-->
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
