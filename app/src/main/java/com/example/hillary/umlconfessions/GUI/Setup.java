@@ -87,7 +87,7 @@ public class Setup extends Fragment {
         confessionsRecyclerView = (RecyclerView) rootView.findViewById(R.id.posts_recycler);
         confessionsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        dividerDrawable = getResources().getDrawable(R.drawable.item_divider);
+        dividerDrawable = getResources().getDrawable(R.drawable.item_divider); //link divider xml to defined drawable divider.
         RecyclerView.ItemDecoration dividerItemDecoration = new DividerItemDecoration(dividerDrawable);
         confessionsRecyclerView.addItemDecoration(dividerItemDecoration);
 
@@ -956,18 +956,22 @@ theTimer.schedule(new TimerTask(){
     }
 
 
+    /* HIllary Ssemakula: This inner class draws the lines below and above each post when the recycler view
+    starts to replicate the posts.
+
+     */
     public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
-        private Drawable mDivider;
+        private Drawable mDivider; //define a drawable.
 
         public DividerItemDecoration(Drawable divider) {
-            mDivider = divider;
+            mDivider = divider; //drawble object is passed in as a parameter
         }
 
 
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
-
+            //if parent(therefore feed) has no posts then don't draw divider
             if (parent.getChildAdapterPosition(view) == 0) {
                 return;
             }
@@ -977,10 +981,11 @@ theTimer.schedule(new TimerTask(){
 
         @Override
         public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
-            int dividerLeft = parent.getPaddingLeft();
-            int dividerRight = parent.getWidth() - parent.getPaddingRight();
+            int dividerLeft = parent.getPaddingLeft(); //get left padding
+            int dividerRight = parent.getWidth() - parent.getPaddingRight(); //get right padding
 
             int childCount = parent.getChildCount();
+            //for all posts , get the child view and draw a top divider and bottom divider
             for (int i = 0; i < childCount; i++) {
                 View child = parent.getChildAt(i);
 

@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_bg2">
-    
+
+    <!-- Hillary Ssemakula
+Alternative resource for a ldevice running API v26. few changes from login.xml
+-->
     <!--Constraint layout great for designing views with drag and drop.
     used here to contain all elements-->
     <android.support.constraint.ConstraintLayout

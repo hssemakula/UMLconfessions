@@ -1,4 +1,5 @@
 <resources>
+    <!-- Theme modification foer the app-->
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"> <!-- must always be set otherwise splash screen and login wont work -->

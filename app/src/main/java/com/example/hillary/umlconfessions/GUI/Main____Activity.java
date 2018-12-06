@@ -160,6 +160,9 @@ public class Main____Activity extends OnlineFunctionality implements NavigationV
         }
 
 
+        /* Hillary SSemakula
+        Modify on back pressed so that it doesn't quit while viweing settings
+         */
     //Back button
     private void showBackButon(boolean enable) {
         if (enable) {

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- string values for app api 21-->
 <resources>
     <string name="to_be_coded_in">To be coded in</string>
     <string name="to_be_coded_in_email_com">To be coded in@email.com</string>

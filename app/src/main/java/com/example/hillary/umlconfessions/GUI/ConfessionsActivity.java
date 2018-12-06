@@ -132,7 +132,7 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
         RecyclerView recyclerView_For_Comments = (RecyclerView) findViewById(R.id.view_post_recycler); //recyclerview for comments from layout will go here
         recyclerView_For_Comments.setLayoutManager(new LinearLayoutManager(ConfessionsActivity.this));//replace with constraint layout?
 
-        dividerDrawable = getResources().getDrawable(R.drawable.item_divider);
+        dividerDrawable = getResources().getDrawable(R.drawable.item_divider); //link divider xml to defined drawable divider.
         RecyclerView.ItemDecoration dividerItemDecoration = new ConfessionsActivity.DividerItemDecoration(dividerDrawable);
         recyclerView_For_Comments.addItemDecoration(dividerItemDecoration);
 
@@ -424,9 +424,13 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
         super.onSaveInstanceState(outState);
     }
 
+    /* HIllary Ssemakula: This inner class draws the lines below and above each post when the recycler view
+starts to replicate the posts.
+
+ */
     public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
-        private Drawable mDivider;
+        private Drawable mDivider; //drawble object is passed in as a parameter
 
         public DividerItemDecoration(Drawable divider) {
             mDivider = divider;
@@ -435,6 +439,7 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
 
         public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
+            //if parent(therefore feed) has no posts then don't draw divider
 
             if (parent.getChildAdapterPosition(view) == 0) {
                 return;
@@ -445,10 +450,11 @@ public class ConfessionsActivity extends AppCompatActivity implements View.OnCli
 
         @Override
         public void onDraw(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
-            int dividerLeft = parent.getPaddingLeft();
-            int dividerRight = parent.getWidth() - parent.getPaddingRight();
+            int dividerLeft = parent.getPaddingLeft();  //get left padding
+            int dividerRight = parent.getWidth() - parent.getPaddingRight(); //get right padding
 
             int childCount = parent.getChildCount();
+            //for all posts , get the child view and draw a top divider and bottom divider
             for (int i = 0; i < childCount; i++) {
                 View child = parent.getChildAt(i);
 

@@ -6,6 +6,9 @@
     android:orientation="vertical"
     tools:context="com.example.hillary.umlconfessions.GUI.ConfessionsActivity">
 
+    <!-- Hillary Ssemakula
+Alternative resource for a device running android api level 26.
+-->
     <!-- A scrollview can only have one direct child -->
     <ScrollView
         android:layout_width="match_parent"
