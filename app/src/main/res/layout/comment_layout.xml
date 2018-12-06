@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Hillary Ssemakula
+This is the template layout that the recyler view uses to display the comments section of a post
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -9,6 +12,8 @@
     android:layout_marginBottom="10dp"
     android:orientation="horizontal">
 
+    <!-- Linear layout for the image on the left of the comment. This helps
+     draw a firm margin so that the text doesn't overflow to the left-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -22,6 +27,7 @@
 
     </LinearLayout>
 
+    <!-- Linear layout container for the comment textview and the voting layout-->
     <LinearLayout
         android:id="@+id/comment_layout"
         android:layout_width="match_parent"
@@ -167,6 +173,7 @@
 
         </RelativeLayout>
 
+        <!-- report button placed in separate layout to avoid text overflowing and overlapping with it. -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

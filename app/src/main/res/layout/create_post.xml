@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Hillary SSemakula
+ this is the main layout displayed when a user tries to post a new comment
+ It is enclosed in a linera layout whose width matches the parent but the height
+ wraps the content
+ background color provided to provide contrast between the post area amd the
+ border of the layout-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -46,6 +52,9 @@
             android:layout_marginStart="10dp"
             card_view:cardCornerRadius="10dp">
 
+            <!-- The lines that this edittext can have are restricted so that
+            it doesn't flow off the screen. Also it set to transparent to
+            remove the default line -->
             <EditText
                 android:id="@+id/confession_text"
                 android:layout_width="wrap_content"
@@ -68,7 +77,8 @@
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
-
+    <!-- The confess and cancel buttons are placed in a realtive layout and pushed
+    to either end of the layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
