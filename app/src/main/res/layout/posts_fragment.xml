@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- HIllary SSemakula
+This layout is for the posts fragment, basically when a user logs in
+The feeds fragments inflates this class and the recyler view adapter fills
+the recycler view with copies of the post layout xml changing them to look
+like the posts from the server.
+
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Recycler view to hold post replications -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/posts_recycler"
         android:layout_width="match_parent"
@@ -11,6 +18,9 @@
 
 
     </android.support.v7.widget.RecyclerView>
+
+    <!-- this is the floating action button(i.e the plus) pressed when
+    a user needs to create a new post -->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Hillary SSemakula
+Like the comments layout, this is the template that the recycler view uses
+to replicate posts when the user logs in. This view is inflated by the feed
+fragment when needed.-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -9,7 +14,7 @@
     android:layout_marginTop="20dp"
     android:layout_marginBottom="20dp"
     android:orientation="vertical">
-
+    <!-- Linear layout to display location and time of post -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -46,7 +51,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-
+<!-- Relative view to hold the post text and the voting lay out. -->
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +85,9 @@
             android:orientation="vertical"
             android:paddingStart="0dp"
             android:paddingEnd="5dp">
-
+        <!-- all components are placed in relative layouts so that they can change
+        easily when their sizes change forexample when the number of upvotes becomes double
+        digit -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -126,6 +133,8 @@
 
     </RelativeLayout>
 
+    <!-- report button and comments button placed in relative layout and plcaed
+    far apart and also below the post text to avoid overlapping and to promote better design. -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

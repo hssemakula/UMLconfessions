@@ -1,32 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- Hillary Ssemakula This is the navigation menu header layout. It displays the
+top part of the navigation widget.
+
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:background="@drawable/profile_bg"
     android:gravity="bottom"
+    android:orientation="vertical"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Light">
 
+    <!-- image view to be cahnged when user logs in -->
     <ImageView
         android:id="@+id/profpic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
-        android:contentDescription="@string/profile_picture_desc" />
+        android:contentDescription="@string/profile_picture_desc"
+        android:src="@mipmap/ic_launcher_round" />
 
+    <!-- textfield changed to user's name when user logs in -->
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="@string/to_be_coded_in"
-        />
-
+        android:text="@string/to_be_coded_in" />
+    <!-- textfield changed to user's email when user logs in -->
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/to_be_coded_in_email_com"
-        />
+        android:text="@string/to_be_coded_in_email_com" />
 </LinearLayout>

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Hillary Ssemakula
+This is the login screen layout inflated when a user is asked to login.
+
+-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" 
-	android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_bg2"
-	tools:context=".LogInActivity">
+    tools:context=".LogInActivity">
 
     <!--Constraint layout great for designing views with drag and drop.
     used here to contain all elements-->
@@ -21,18 +25,17 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/logo_header"
             android:padding="20dp"
             android:src="@drawable/logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.123"
-            android:contentDescription="@string/logo_header" />
+            app:layout_constraintVertical_bias="0.123" />
 
         <!--username textfield -->
         <EditText
-            android:visibility="gone"
             android:id="@+id/username"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
@@ -42,22 +45,21 @@
             android:layout_marginBottom="8dp"
             android:autofillHints="someone@student.uml.edu"
             android:background="@drawable/inp_rou"
+            android:drawableStart="@drawable/ic_person_black_24dp"
             android:gravity="start"
             android:hint="@string/username_hint"
             android:inputType=""
             android:padding="8dp"
-            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.763"
-            tools:targetApi="o"
-            />
+            tools:targetApi="o" />
 
         <!--password textfield -->
         <EditText
-            android:visibility="gone"
             android:id="@+id/password"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
@@ -67,11 +69,12 @@
             android:layout_marginBottom="8dp"
             android:autofillHints=""
             android:background="@drawable/inp_rou"
-            android:gravity="start"
             android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:gravity="start"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:padding="8dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,16 +99,16 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-           <!-- android:onClick="submitLogin"-->
-			
-			    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- android:onClick="submitLogin"-->
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
 
     </android.support.constraint.ConstraintLayout>
 
