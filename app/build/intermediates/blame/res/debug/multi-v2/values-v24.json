@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Hillary\\Desktop\\UMLconfessions\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3322c2a924da87f838b2ba9170de7db2\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-2\\files-2.1\\48f8f6bd0cd3bfbf078531c728471716\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\eedb9fca332f9e301d4e9692dc7532c7\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Hillary\\.gradle\\caches\\transforms-2\\files-2.1\\87b60f2d1f3bf9ccaeaa69be73107665\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
